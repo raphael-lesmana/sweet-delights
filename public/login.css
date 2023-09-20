@@ -1,0 +1,56 @@
+.title {
+    color: white;
+    font-size: 30px;
+}
+
+body {
+    background-color: black;
+}
+
+img {
+    height: 600px;
+}
+
+.content {
+    font-size: 10px;
+}
+
+.loginpage {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+.ask {
+    color: white;
+}
+
+.signup {
+    color: yellow;
+}
+
+.email {
+    text-align: left;
+    color: white;
+}
+
+.password {
+    color: white;
+}
+
+.rememberMe {
+    color: white;
+}
+
+.fillIn {
+    width: 250px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+}
+
+form {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
