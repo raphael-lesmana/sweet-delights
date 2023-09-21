@@ -1,6 +1,6 @@
 <h2>
     Register
-    <form>
+    <form action="/register" method="post">
         <label for = "email">
             <b>Email Address</b>
         </label>

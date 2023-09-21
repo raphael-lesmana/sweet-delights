@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Log In</title>
-        <link href="login.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class = "loginpage">
-            <div class = "image">
-                <img src = "https://media.istockphoto.com/id/545286388/id/foto/latar-belakang-kosong-makanan-cina.jpg?s=612x612&w=0&k=20&c=cP30wn8oY16u-7wAe_vlnDhDNaGpRuFYtDDKDHKLMQk=">
+
+<head>
+    <title>Log In</title>
+    <link href="login.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="loginpage">
+        <div class="image">
+            <img
+                src="https://media.istockphoto.com/id/545286388/id/foto/latar-belakang-kosong-makanan-cina.jpg?s=612x612&w=0&k=20&c=cP30wn8oY16u-7wAe_vlnDhDNaGpRuFYtDDKDHKLMQk=">
             </div>
             <div class = "content">
                 <form>
