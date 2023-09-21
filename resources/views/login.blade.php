@@ -12,19 +12,22 @@
             <div class = "content">
                 <form>
                     <h2 class = "title">Login</h2>
-                    <article class = "email">
+                    <p>
                         Email Address
-                    </article>
+                    </p>
                     <input class = "fillIn" type = "text" placeholder = "Has to end with '@gmail.com'" name = "email" required>
-                    <article class = "password">
+                    <p>
                         Password
-                    </article>
+                    </p>
                     <input class = "fillIn" type = "text" placeholder = "Minimum 5 Characters, Maximum 255 Characters" name = "password">
-                    <input type = "checkbox"><article class = "rememberMe">Remember Me</article>
+                    
+                    <div class = "remember">
+                        <input type = "checkbox">
+                        <p class = "rememberMe">Remember Me</p>
+                    </div>  
                     <button type = "submit">
                         Login
                     </button>
-                    <p class = "ask">Don't have an account?</p><p class = "signup"> Sign up</p>
                 </form>
             </div>
         </div>

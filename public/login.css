@@ -1,6 +1,6 @@
 .title {
     color: white;
-    font-size: 30px;
+    font-size: 300%;
 }
 
 body {
@@ -30,17 +30,26 @@ img {
     color: yellow;
 }
 
-.email {
+p{
     text-align: left;
     color: white;
+    font-size: 200%
 }
 
-.password {
-    color: white;
+.remember{
+    display: inline-block;
+    justify-items: center;
+    size: 30px;
 }
 
 .rememberMe {
-    color: white;
+    display: inline-block;
+    padding: auto;
+    font-size: 200%;
+}
+
+.asking {
+    display: inline-block;
 }
 
 .fillIn {
