@@ -1,11 +1,7 @@
 .title {
     color: white;
     font-size: 400%;
-}
-
-h1 {
-    text-align: center;
-    margin-left: 150px;
+    margin-left: 200px;
 }
 
 label {
@@ -26,18 +22,9 @@ img {
 
 .registerpage {
     display: grid;
-    align-items: center;
     grid-template-columns: 2fr 1fr 1fr;
-    column-gap: 5px;
 }
 
-.ask {
-    color: white;
-}
-
-.signup {
-    color: yellow;
-}
 
 p{
     text-align: left;
@@ -48,14 +35,11 @@ p{
 form {
     text-align: left;
     margin: auto;
-}
-
-fieldset {
-    border: none;
+    margin-left: -350px;
 }
 
 input{
-    width: 100%;
+    width: 70%;
     margin-bottom: 10px;
 }
 
