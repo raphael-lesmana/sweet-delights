@@ -1,6 +1,17 @@
 .title {
     color: white;
-    font-size: 300%;
+    font-size: 400%;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 150px;
+}
+
+label {
+    color: white;
+    font-size: 150%;
+    align-items: left;
 }
 
 body {
@@ -9,6 +20,7 @@ body {
 
 img {
     height: 600px;
+    text-align: left;
 }
 
 .content {
@@ -18,7 +30,7 @@ img {
 .loginpage {
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     column-gap: 5px;
 }
 
@@ -36,30 +48,20 @@ p{
     font-size: 200%
 }
 
-.remember{
-    display: inline-block;
-    justify-items: center;
-    size: 30px;
-}
-
-.rememberMe {
-    display: inline-block;
-    padding: auto;
-    font-size: 200%;
-}
-
-.asking {
-    display: inline-block;
-}
-
-.fillIn {
-    width: 250px;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 5px;
-}
-
 form {
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    text-align: left;
+    margin-left: 50px;
 }
+
+fieldset {
+    border: none;
+}
+
+input{
+    width: 150%;
+}
+
+input[type="submit"] {
+    width: 60%;
+}
+  

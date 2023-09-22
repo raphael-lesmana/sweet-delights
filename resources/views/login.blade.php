@@ -8,29 +8,24 @@
 
 <body>
     <div class="loginpage">
-        <div class="image">
-            <img
-                src="https://media.istockphoto.com/id/545286388/id/foto/latar-belakang-kosong-makanan-cina.jpg?s=612x612&w=0&k=20&c=cP30wn8oY16u-7wAe_vlnDhDNaGpRuFYtDDKDHKLMQk=">
-            </div>
+        <img src="https://media.istockphoto.com/id/545286388/id/foto/latar-belakang-kosong-makanan-cina.jpg?s=612x612&w=0&k=20&c=cP30wn8oY16u-7wAe_vlnDhDNaGpRuFYtDDKDHKLMQk=">
             <div class = "content">
+                <h1 class = "title">Login</h1>
                 <form>
-                    <h2 class = "title">Login</h2>
-                    <p>
-                        Email Address
-                    </p>
-                    <input class = "fillIn" type = "text" placeholder = "Has to end with '@gmail.com'" name = "email" required>
-                    <p>
-                        Password
-                    </p>
-                    <input class = "fillIn" type = "text" placeholder = "Minimum 5 Characters, Maximum 255 Characters" name = "password">
-                    
-                    <div class = "remember">
-                        <input type = "checkbox">
-                        <p class = "rememberMe">Remember Me</p>
-                    </div>  
-                    <button type = "submit">
-                        Login
-                    </button>
+                    <fieldset>
+                        <label for="email">Email Address
+                        <input type="email" placeholder = "Has to end with '@gmail.com'" name="email" required>
+                        </label>
+
+                        <label for="password">
+                            Password
+                        <input type = "text" placeholder = "Minimum 5 Characters, Maximum 255 Characters" name = "password" required>
+                        </label>
+                    </fieldset>
+                    <label for = "rememberMe">
+                        <input type="checkbox" name="rememberMe" value="Remember Me">Remember Me
+                    </label>
+                    <input type="submit" value="Login" />
                 </form>
             </div>
         </div>
