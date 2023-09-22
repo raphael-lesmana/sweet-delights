@@ -22,9 +22,11 @@
                         <input type = "text" placeholder = "Minimum 5 Characters, Maximum 255 Characters" name = "password" required>
                         </label>
                     </fieldset>
+                    <fieldset>
                     <label for = "rememberMe">
                         <input type="checkbox" name="rememberMe" value="Remember Me">Remember Me
                     </label>
+                    </fieldset>
                     <input type="submit" value="Login" />
                 </form>
             </div>
