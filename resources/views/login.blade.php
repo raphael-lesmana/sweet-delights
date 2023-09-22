@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>Log In</title>
     <link href="login.css" rel="stylesheet">
 </head>

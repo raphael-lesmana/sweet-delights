@@ -1,0 +1,67 @@
+.title {
+    color: white;
+    font-size: 400%;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 150px;
+}
+
+label {
+    color: white;
+    font-size: 150%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+img {
+    height: 600px;
+    text-align: left;
+}
+
+.registerpage {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+.ask {
+    color: white;
+}
+
+.signup {
+    color: yellow;
+}
+
+p{
+    text-align: left;
+    color: white;
+    font-size: 100%
+}
+
+form {
+    text-align: left;
+    margin: auto;
+}
+
+fieldset {
+    border: none;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    width: 50%;
+    margin: auto;
+    margin-left: 100px;
+}
+  
