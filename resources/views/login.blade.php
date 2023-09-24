@@ -22,7 +22,7 @@
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label">Password</label>
-                        <input id="password" type="text" class="form-control" placeholder="Minimum 5 Characters, Maximum 255 Characters" name="password" required style="width: 450px">
+                        <input id="password" type="password" class="form-control" placeholder="Minimum 5 Characters, Maximum 255 Characters" name="password" required style="width: 450px">
                     </div>
                     <div class="mb-4 form-check">
                         <input type="checkbox" style="width: 18px; height:18px" id="rememberMe" class="form-check-input">

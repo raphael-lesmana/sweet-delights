@@ -28,12 +28,12 @@
 
                     <div class="mb-4">
                         <label for="password" class="form-label">Password</label>
-                        <input id="password" type="text" class="form-control" placeholder="Minimum 5 Characters, Maximum 255 Characters" name="password" required style="width: 450px">
+                        <input id="password" type="password" class="form-control" placeholder="Minimum 5 Characters, Maximum 255 Characters" name="password" required style="width: 450px">
                     </div>
 
                     <div class="mb-4">
                         <label for="conPassword" class="form-label">Confirm Password</label>
-                        <input id="conPassword" type="text" class="form-control" placeholder="Has to be the same with Password Field" name="conPassword" required style="width: 450px">
+                        <input id="conPassword" type="password" class="form-control" placeholder="Has to be the same with Password Field" name="conPassword" required style="width: 450px">
                     </div>
 
                     <button type="submit" class="btn btn-secondary mb-4" style="width: 450px">Register</button>
