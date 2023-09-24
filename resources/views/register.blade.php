@@ -15,15 +15,16 @@
                 
             <div class="col-4" style="margin-top: 75px; color:white">
                 <h1 style="color: white; text-align: center">Register</h1>
-                <form>
+                <form action="/register" method="post">
+                    @csrf
                     <div class="mb-4">
                         <label for="email" class="form-label">Email</label>
                         <input id="email" type="email" class="form-control" placeholder="Has to end with @gmail.com" name="email" required style="width: 450px">
                     </div>
 
                     <div class="mb-4">
-                        <label for="username" class="form-label">Username</label>
-                        <input id="username" type="text" class="form-control" placeholder="Minimum 5 Characters, Maximum 50 Characters" name="username" required style="width: 450px">
+                        <label for="name" class="form-label">Username</label>
+                        <input id="name" type="text" class="form-control" placeholder="Minimum 5 Characters, Maximum 50 Characters" name="name" required style="width: 450px">
                     </div>
 
                     <div class="mb-4">
