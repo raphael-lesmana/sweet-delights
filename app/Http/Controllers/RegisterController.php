@@ -10,12 +10,12 @@ class RegisterController extends Controller
 {
     public function register(Request $request)
     {
-        // $request->validate([
-        //     'email' => 'required|email|ends_with:@gmail.com',
-        //     'username' => 'required|between:5,50',
-        //     'password' => 'required|between:5,255',
-        //     'conpassword' => 'required|between:5,255|same:password',
-        // ]);
+        $request->validate([
+            'email' => 'required|email|ends_with:@gmail.com',
+            'name' => 'required|between:5,50',
+            'password' => 'required|between:5,255',
+            'conPassword' => 'required|between:5,255|same:password',
+        ]);
 
         $user = new User;
         $user->email = $request->email;

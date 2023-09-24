@@ -92,7 +92,7 @@
             <div class="col-4">
                 <button class="btn btn-dark active" type="button" style="background-color: black; margin-top: 10px; margin-bottom: 10px">
                     <img src="https://www.tasteasianfood.com/wp-content/uploads/2017/02/Mongolian-beef-featured-image.jpg.webp" style="height: 215px; width: 430px; object-fit: cover">
-                    <p style="color: gold; margin: auto; font-size: 20px">Mangolian Beef</p>
+                    <p style="color: gold; margin: auto; font-size: 20px">Mongolian Beef</p>
                 </button>   
 
                 <button class="btn btn-dark active" type="button" style="background-color: black; margin-top: 10px; margin-bottom: 10px">
