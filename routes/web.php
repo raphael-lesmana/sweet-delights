@@ -25,4 +25,8 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/homepage', function () {
+    return view('homepage');
+});
+
 Route::post('/register', [RegisterController::class, 'register']);
