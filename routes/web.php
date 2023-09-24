@@ -30,4 +30,12 @@ Route::get('/homepage', function () {
     return view('homepage');
 });
 
+Route::get('/search', function () {
+    return view('search');
+});
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
 Route::post('/register', [RegisterController::class, 'register']);
