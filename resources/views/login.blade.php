@@ -13,7 +13,7 @@
                 <img src="https://media.istockphoto.com/id/545286388/id/foto/latar-belakang-kosong-makanan-cina.jpg?s=612x612&w=0&k=20&c=cP30wn8oY16u-7wAe_vlnDhDNaGpRuFYtDDKDHKLMQk=" style="height: 650px">
             </div>
                 
-            <div class="col-4" style="margin-top: 200px; color:white">
+            <div class="col-4" style="margin-top: 150px; color:white">
                 <h1 style="color: white; text-align: center">Login</h1>
                 <form>
                     <div class="mb-4">
