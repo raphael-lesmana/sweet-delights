@@ -15,6 +15,7 @@ class LoginController extends Controller
         ]);
 
         $user = User::where('email', $request->email)->first();
-        session(['user_id', $user->id]);
+        $request->session()->put('user_id', $user->id);
+        return redirect('/');
     }
 }
