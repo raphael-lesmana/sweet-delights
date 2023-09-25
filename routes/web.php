@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,5 +38,7 @@ Route::get('/search', function () {
 Route::get('/checkout', function () {
     return view('checkout');
 });
+
+Route::post('/login', [LoginController::class, 'login']);
 
 Route::post('/register', [RegisterController::class, 'register']);

@@ -22,6 +22,7 @@ class RegisterController extends Controller
         $user->name = $request->name;
         $user->password = $request->password;
         $user->save();
+        session(['user_id', $user->id]);
 
         return redirect("/homepage");
     }
