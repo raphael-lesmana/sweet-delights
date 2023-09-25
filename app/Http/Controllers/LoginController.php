@@ -18,9 +18,8 @@ class LoginController extends Controller
             return redirect()->back();
         });
         if ($user->password != $request->password)
-        {
             return redirect()->back();
-        }
+        
         $request->session()->put('user_id', $user->id);
         return redirect('/');
     }
