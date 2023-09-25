@@ -14,7 +14,13 @@ class LoginController extends Controller
             'password' => 'required|between:5,255'
         ]);
 
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->firstOr(function () {
+            return redirect()->back();
+        });
+        if ($user->password != $request->password)
+        {
+            return redirect()->back();
+        }
         $request->session()->put('user_id', $user->id);
         return redirect('/');
     }
