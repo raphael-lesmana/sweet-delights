@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -21,7 +22,8 @@ class RegisterController extends Controller
         $user->name = $request->name;
         $user->password = $request->password;
         $user->save();
-        $request->session()->put('user_id', $user->id);
+        
+        Auth::login($user);
 
         return redirect("/");
     }
