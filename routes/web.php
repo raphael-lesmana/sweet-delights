@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -20,21 +20,19 @@ Route::get('/', function () {
     return view('homepage');
 })->middleware('auth');
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+Route::get('/login', [LoginController::class, 'get'])->name('login');
 
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+Route::get('/register', [RegisterController::class, 'get'])->name('register');
 
 Route::get('/search', function () {
     return view('search');
-});
+})->middleware('auth');
 
 Route::get('/checkout', function () {
     return view('checkout');
-});
+})->middleware('auth');
+
+Route::get('/add', [ItemController::class, 'get_add'])->middleware('auth');
 
 Route::post('/login', [LoginController::class, 'login']);
 

@@ -8,6 +8,14 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
+    public function get(Request $request)
+    {
+        if (auth()->user())
+            return redirect('/');
+        else
+            return view('regsiter');
+    }
+
     public function register(Request $request)
     {
         $request->validate([

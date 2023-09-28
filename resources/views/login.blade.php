@@ -26,7 +26,7 @@
                         <input id="password" type="password" class="form-control" placeholder="Minimum 5 Characters, Maximum 255 Characters" name="password" required style="width: 400px">
                     </div>
                     <div class="mb-4 form-check">
-                        <input type="checkbox" style="width: 18px; height:18px" id="rememberMe" class="form-check-input">
+                        <input type="checkbox" style="width: 18px; height:18px" id="rememberMe" class="form-check-input" name="remember">
                         <label for="rememberMe" class="form-check-label">Remember Me</label>
                     </div>
                     <button type="submit" class="btn btn-secondary mb-4" style="width: 400px">Login</button>
