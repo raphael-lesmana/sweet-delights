@@ -7,12 +7,25 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function get(Request $requeest)
+    public function get_login(Request $request)
     {
         if (auth()->user())
             return redirect('/');
         else
             return view('login');
+    }
+
+    public function get_logout(Request $request)
+    {
+        if (auth()->user())
+        {
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return redirect('/');
+        }
+        else
+            return redirect('/login');
     }
     
     public function login(Request $request)

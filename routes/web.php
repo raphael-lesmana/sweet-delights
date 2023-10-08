@@ -20,7 +20,9 @@ Route::get('/', function () {
     return view('homepage');
 })->middleware('auth');
 
-Route::get('/login', [LoginController::class, 'get'])->name('login');
+Route::get('/login', [LoginController::class, 'get_login'])->name('login');
+
+Route::get('/logout', [LoginController::class, 'get_logout'])->name('logout');
 
 Route::get('/register', [RegisterController::class, 'get'])->name('register');
 
