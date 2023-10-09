@@ -13,7 +13,7 @@ class RegisterController extends Controller
         if (auth()->user())
             return redirect('/');
         else
-            return view('regsiter');
+            return view('register');
     }
 
     public function register(Request $request)
@@ -34,5 +34,12 @@ class RegisterController extends Controller
         Auth::login($user);
 
         return redirect("/");
+    }
+
+    public function attributes(): array
+    {
+        return [
+            'conPassword' => 'password confirmation',
+        ];
     }
 }
