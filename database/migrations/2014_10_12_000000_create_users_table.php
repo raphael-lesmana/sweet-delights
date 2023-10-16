@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('address', 64)->nullable();
             $table->string('picture', 32)->nullable();
             $table->boolean('is_admin');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
