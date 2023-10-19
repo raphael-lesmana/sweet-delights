@@ -16,6 +16,7 @@
             <div class="col-4" style="margin-top: 150px; color:white; margin-left: -20px">
                 <h1 style="color: white; text-align: center">Login</h1>
                 <form>
+                    @csrf
                     <div class="mb-4">
                         <label for="email" class="form-label">Email</label>
                         <input id="email" type="email" class="form-control" placeholder="Has to end with @gmail.com" name="email" required style="width: 400px">

@@ -20,7 +20,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Search Food</a>
+                    <a class="nav-link active" href="search">Search Food</a>
                 </li>
             
                 <li class="nav-item">
@@ -43,7 +43,16 @@
     </div>
 </nav>
 
+<div class="bg-image" style="background-image: url('https://media.istockphoto.com/id/1005545622/id/vektor/batas-mulus-dengan-awan-cina.jpg?s=170667a&w=0&k=20&c=NYFCS0Lv0cSUzLMQlnnQ1D8cH_29OM61978W56KIhCU=');">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);"></div>
+</div>
+
 <body style="color: gold">
+    
+    
+    <div style="background-image:  
+                background-color: rgba(0, 0, 0, 0.6)"></div>
+
     <h1>
         菜单 | Menu
     </h1>
