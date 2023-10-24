@@ -113,4 +113,3 @@
             @endforeach
         </div>
     </div>
-@endsection
