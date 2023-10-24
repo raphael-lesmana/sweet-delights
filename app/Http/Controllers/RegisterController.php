@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
+    public function get(Request $request)
+    {
+        if (auth()->user())
+            return redirect('/');
+        else
+            return view('register');
+    }
+
     public function register(Request $request)
     {
         $request->validate([
@@ -22,7 +30,16 @@ class RegisterController extends Controller
         $user->name = $request->name;
         $user->password = $request->password;
         $user->save();
+        
+        Auth::login($user);
 
-        return redirect("/homepage");
+        return redirect("/");
+    }
+
+    public function attributes(): array
+    {
+        return [
+            'conPassword' => 'password confirmation',
+        ];
     }
 }
