@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Gate;
 
 class ItemController extends Controller
 {
-    public function get_add(Request $request)
+    public function index(Request $request)
     {
         if (!Gate::allows('admin'))
             abort(403);

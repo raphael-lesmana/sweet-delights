@@ -13,6 +13,7 @@
         <button class="btn btn-dark">Search</button>
     </form>
     <form class="d-flex" style="color: white">
+        @csrf
         Filter by Category 
         <input type="checkbox" id="main-course" class = "form-check-input" style="margin-left: 10px">
         <label for="main-course" class="form-check-label" >Main Course</label>

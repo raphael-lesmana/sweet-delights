@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,24 +18,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'get'])->middleware('auth');
+Route::get('/', [HomeController::class, 'index'])->middleware('auth');
 
-Route::get('/login', [LoginController::class, 'get_login'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/logout', [LoginController::class, 'get_logout'])->name('logout');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/register', [RegisterController::class, 'get'])->name('register');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
 
-Route::get('/search', function () {
-    return view('search');
-})->middleware('auth');
+Route::get('/search', [SearchController::class, 'index'])->middleware('auth');
 
 Route::get('/checkout', function () {
     return view('checkout');
 })->middleware('auth');
 
-Route::get('/add', [ItemController::class, 'get_add'])->middleware('auth');
+Route::get('/add', [ItemController::class, 'index'])->middleware('auth');
 
-Route::post('/login', [LoginController::class, 'login']);
-
-Route::post('/register', [RegisterController::class, 'register']);

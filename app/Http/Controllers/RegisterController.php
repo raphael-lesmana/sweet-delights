@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
-    public function get(Request $request)
+    public function index(Request $request)
     {
         if (auth()->user())
             return redirect('/');
