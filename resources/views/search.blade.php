@@ -10,18 +10,19 @@
     <h1 style="color: gold; margin-bottom: 30px">搜索食物 | Search Foods</h1>
     <form class="d-flex" style="margin-bottom: 30px" action="/search" method="get">
         @csrf
+        <div>
         <input class="form-control me-2" type="search" placeholder="Search" name="search" style="width: 700px">
         <button class="btn btn-dark">Search</button>
-    </form>
-    <form class="d-flex" style="color: white" action="/search" method="get">
+        </div>
+        <div class="mb-3 form-check" style="color: white">
         @csrf
-        Filter by Category 
         <input type="checkbox" id="main-course" class = "form-check-input" style="margin-left: 10px">
         <label for="main-course" class="form-check-label" >Main Course</label>
         <input type="checkbox" id="beverages" style="margin-left: 10px">
         <label for="beverages">Beverages</label>
         <input type="checkbox" id="dessert" style="margin-left: 10px">
         <label for="dessert">Dessert</label>
+    </div?
     </form>
     
 </body>
