@@ -8,11 +8,12 @@
 
 <body style="background-color: black; margin-left: 100px; margin-top: 100px">
     <h1 style="color: gold; margin-bottom: 30px">搜索食物 | Search Foods</h1>
-    <form class="d-flex" style="margin-bottom: 30px">
-        <input class="form-control me-2" type="search" placeholder="Search" style="width: 700px">
+    <form class="d-flex" style="margin-bottom: 30px" action="/search" method="get">
+        @csrf
+        <input class="form-control me-2" type="search" placeholder="Search" name="search" style="width: 700px">
         <button class="btn btn-dark">Search</button>
     </form>
-    <form class="d-flex" style="color: white">
+    <form class="d-flex" style="color: white" action="/search" method="get">
         @csrf
         Filter by Category 
         <input type="checkbox" id="main-course" class = "form-check-input" style="margin-left: 10px">
