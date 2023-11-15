@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('transaction_details', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('transaction_header_id')->constrained();
+            $table->foreignId('item_id')->constrained();
+            $table->integer('qty');
             $table->timestamps();
         });
     }
