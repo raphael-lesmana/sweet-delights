@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class TransactionDetail extends Model
 {
+    protected $fillable = [
+        'qty'
+    ];
+    public function transaction_header()
+    {
+        return $this->belongsTo(TransactionHeader::class);
+    }
     use HasFactory;
 }
