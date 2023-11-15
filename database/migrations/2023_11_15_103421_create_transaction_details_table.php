@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transactions_items', function (Blueprint $table) {
-            $table->foreignId('transactions_id')->constrained();
-            $table->foreignId('items_id')->constrained();
-            $table->integer('quantity');
+        Schema::create('transaction_details', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction_items');
+        Schema::dropIfExists('transaction_details');
     }
 };

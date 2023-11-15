@@ -36,3 +36,5 @@ Route::get('/checkout', function () {
 
 Route::get('/add', [ItemController::class, 'index'])->middleware('auth');
 
+Route::get('/item/{id}', [ItemController::class, 'detail']);
+

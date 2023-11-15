@@ -67,10 +67,12 @@
         <div class=row>
             @foreach ($main_dishes as $main_dish)
             <div class="col-4">
+                <a href="/item/{{$main_dish->id}}">
                 <button class="btn btn-dark active" type="button" style="background-color: black; margin-top: 10px; margin-bottom: 10px" >
                     <img src="{{$main_dish->picture}}" style="height: 215px; width: 430px; object-fit: cover">
                     <p style="color: gold; margin: auto; font-size: 20px">{{$main_dish->name}}</p>
                 </button>
+                </a>
             </div>
             @endforeach
         </div>
@@ -86,10 +88,12 @@
         <div class=row>
             @foreach ($beverages as $beverage)
             <div class="col-4">
+                <a href="/item/{{$beverage->id}}">
                 <button class="btn btn-dark active" type="button" style="background-color: black; margin-top: 10px; margin-bottom: 10px" >
                     <img src="{{$beverage->picture}}" style="height: 215px; width: 430px; object-fit: cover">
                     <p style="color: gold; margin: auto; font-size: 20px">{{$beverage->name}}</p>
                 </button>
+                </a>
             </div>
             @endforeach
         </div>
@@ -105,10 +109,12 @@
         <div class=row>
             @foreach ($desserts as $dessert)
             <div class="col-4">
+                <a href="/item/{{$dessert->id}}">
                 <button class="btn btn-dark active" type="button" style="background-color: black; margin-top: 10px; margin-bottom: 10px" >
                     <img src="{{$dessert->picture}}" style="height: 215px; width: 430px; object-fit: cover">
                     <p style="color: gold; margin: auto; font-size: 20px">{{$dessert->name}}</p>
                 </button>
+                </a>
             </div>
             @endforeach
         </div>
