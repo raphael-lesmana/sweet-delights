@@ -49,6 +49,11 @@ class User extends Authenticatable
         
     ];
 
+    public function cart_item()
+    {
+        return $this->hasMany(CartItem::class);
+    }
+
     protected function password(): Attribute
     {
         return Attribute::make(

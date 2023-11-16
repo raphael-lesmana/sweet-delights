@@ -16,15 +16,15 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="homepage">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Search Food</a>
+                    <a class="nav-link active" href="/search">Search Food</a>
                 </li>
             
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Cart</a>
+                    <a class="nav-link active" href="/cart">Cart</a>
                 </li>
             
                 <li class="nav-item dropdown">

@@ -10,6 +10,10 @@
 
 @auth
 @if (!Gate::allows('admin'))
-<button>Order</button>
+{{-- should use ajax --}}
+<form action="/item/{{$item->id}}" method="POST">
+    @csrf
+    <button>Order</button>
+</form>
 @endif
 @endauth

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('full_description');
             $table->integer('price')->unsigned();
             $table->string('picture');
+            $table->timestamps();
         });
     }
 

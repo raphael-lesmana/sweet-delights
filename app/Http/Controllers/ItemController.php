@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CartItem;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,5 +25,18 @@ class ItemController extends Controller
             return view('details', compact('item'));
         else
             abort(404);
+    }
+
+    public function order($id)
+    {
+        $item = Item::find($id);
+        if (!isset($item))
+            abort(404);
+
+        auth()->user()->cart_item()->create([
+            'item_id' => $id,
+            'qty' => 1,
+        ]);
+        return back();
     }
 }
