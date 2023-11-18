@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('phone_number', 12)->nullable();
-            $table->string('address', 64)->nullable();
-            $table->string('picture', 32)->nullable();
+            $table->string('address', 128)->nullable();
+            $table->string('picture', 256)->nullable();
             $table->boolean('is_admin');
             $table->rememberToken();
             $table->timestamps();

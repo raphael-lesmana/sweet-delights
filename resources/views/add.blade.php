@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Add New Food</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-
-<body style="margin-left: 300px; margin-right: 300px; margin-top: 100px; background-color: black; color: gold">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, in ratione fugit nisi vero aliquid quaerat excepturi quibusdam culpa error ullam illum, corrupti voluptatem quo minima. Libero facere sint accusantium!
-</body>
-
-</html>
+<h1>Add New Food</h1>
+<form action="/add" method="POST" enctype="multipart/form-data">
+    @csrf
+    <label for="name">Food name</label>
+    <input type="text" name="name" placeholder="Minimum 5 characters"><br>
+    <label for="brief_description">Brief description</label>
+    <textarea name="brief_description" placeholder="Maximum 100 characters"></textarea><br>
+    <label for="brief_description">Full description</label>
+    <textarea name="full_description" placeholder="Maximum 255 characters"></textarea><br>
+    <label for="brief_description">Category</label>
+    <select name="type">
+        <option value="main">Main dish</option>
+        <option value="beverage">Beverage</option>
+        <option value="dessert">Dessert</option>
+    </select><br>
+    <label for="brief_description">Price</label>
+    <input type="number" name="price"><br>
+    <label for="picture">Image file</label>
+    <input type="file" name="picture"><br>
+    <button>Add</button>
+</form>

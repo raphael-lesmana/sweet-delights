@@ -20,7 +20,8 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->userName() . '@gmail.com',
-            'password' => 'password', // password
+            'picture' => 'default' . rand(0,2) . '.jpg',
+            'password' => 'password',
         ];
     }
 

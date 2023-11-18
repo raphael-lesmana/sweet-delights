@@ -4,6 +4,7 @@ use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
@@ -36,8 +37,14 @@ Route::get('/checkout', function () {
 })->middleware('auth');
 
 Route::get('/add', [ItemController::class, 'index'])->middleware('auth');
+Route::post('/add', [ItemController::class, 'add'])->middleware('auth');
 
 Route::get('/item/{id}', [ItemController::class, 'detail']);
 Route::post('/item/{id}', [ItemController::class, 'order']);
 
 Route::get('/cart', [CartItemController::class, 'display'])->middleware('auth');
+
+Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
+
+Route::get('/settings', [ProfileController::class, 'settings'])->middleware('auth');
+Route::patch('/settings', [ProfileController::class, 'save'])->middleware('auth');

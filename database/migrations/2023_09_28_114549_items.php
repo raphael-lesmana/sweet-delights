@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('brief_description');
             $table->string('full_description');
             $table->integer('price')->unsigned();
-            $table->string('picture');
+            $table->string('picture')->default('');
             $table->timestamps();
         });
     }
