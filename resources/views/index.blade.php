@@ -19,13 +19,23 @@
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 
-                <li class="nav-item">
-                    <a class="nav-link active" href="/search">Search Food</a>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link active" href="/cart">Cart</a>
-                </li>
+                @if (!Gate::allows('admin'))
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/search">Search Food</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/cart">Cart</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/add">Add New Food</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/manage">Manage Food</a>
+                    </li>
+                @endif
                 @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false`">

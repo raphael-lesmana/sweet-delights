@@ -54,6 +54,11 @@ class User extends Authenticatable
         return $this->hasMany(CartItem::class);
     }
 
+    public function transaction_header()
+    {
+        return $this->hasMany(TransactionHeader::class);
+    }
+
     protected function password(): Attribute
     {
         return Attribute::make(

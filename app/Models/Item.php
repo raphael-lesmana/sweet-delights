@@ -17,4 +17,14 @@ class Item extends Model
         'price',
         'picture'
     ];
+
+    public function cart_item()
+    {
+        return $this->hasMany(CartItem::class);
+    }
+
+    public function transaction_detail()
+    {
+        return $this->hasMany(TransactionDetail::class);
+    }
 }
