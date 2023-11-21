@@ -3,8 +3,9 @@
 @section ('title', 'Search')
 
 @section('content')
-<div style="margin-left: 100px; margin-top: 25px">
-    <h1 style="color: gold; margin-bottom: 30px">搜索食物 | Search Foods</h1>
+
+<div style="margin-left: 100px">
+    <h1 style="color: gold; margin-bottom: 30px; padding-top: 20px">搜索食物 | Search Foods</h1>
     <form style="margin-bottom: 30px" action="/search" method="get">
         @csrf
         <div class="mb-3">
@@ -27,9 +28,4 @@
         <button class="btn btn-dark">Search</button>
     </form> 
 </div>
-
-<div>
-
-</div>
-
 @endsection
