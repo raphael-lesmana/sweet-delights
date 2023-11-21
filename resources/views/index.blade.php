@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -60,10 +60,14 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 
-<body style="color: gold">
-    <h1>
+@extends('include.navbar')
+
+@section('title', 'Home Page')
+
+@section('content')
+    <h1 style="color: gold">
         菜单 | Menu
     </h1>
     <button type="button" class="btn btn-secondary" style="font-size: 15px">
@@ -140,6 +144,4 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-
-</html>
+@endsection

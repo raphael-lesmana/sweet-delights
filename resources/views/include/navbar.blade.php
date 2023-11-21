@@ -65,8 +65,8 @@
     </nav> 
     
 <div class="bg-image" 
-    style="background-image: url(storage/assets/background-img/background.png); height: 100vh">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.9); height: 100vh">
+    style="background-image: url(storage/assets/background-img/background.png); height: 100vh; overflow: scroll">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.9); background-size: cover; height: 100vh">
         @yield('content')
     </div>
 </div>
