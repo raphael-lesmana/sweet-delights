@@ -8,7 +8,7 @@
 
 <body style="background-color: black; margin-left: 100px; margin-top: 100px">
     <h1 style="color: gold; margin-bottom: 30px">搜索食物 | Search Foods</h1>
-    <form style="margin-bottom: 30px" action="/search" method="get">
+    <form style="margin-bottom: 30px" action="/manage" method="get">
         @csrf
         <div class="mb-3">
             <input class="form-control me-2" type="search" placeholder="Search" name="search" style="width: 700px">

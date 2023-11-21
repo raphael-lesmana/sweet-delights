@@ -16,28 +16,47 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="homepage">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Search Food</a>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Cart</a>
-                </li>
-            
+                @if (!Gate::allows('admin'))
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/search">Search Food</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/cart">Cart</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/add">Add New Food</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/manage">Manage Food</a>
+                    </li>
+                @endif
+                @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false`">
-                        Welcome, Xiao User
+                        Welcome, {{ auth()->user()->name }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Transaction History</a></li>
+                        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="/history">Transaction History</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                        <li><a class="dropdown-item" href="/logout">Sign Out</a></li>
                     </ul>
                 </li>
+                @endauth
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/login">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/register">Register</a>
+                    </li>
+                @endguest
             </ul>
         </div>
     </div>
@@ -67,10 +86,12 @@
         <div class=row>
             @foreach ($main_dishes as $main_dish)
             <div class="col-4">
+                <a href="/item/{{$main_dish->id}}">
                 <button class="btn btn-dark active" type="button" style="background-color: black; margin-top: 10px; margin-bottom: 10px" >
-                    <img src="{{$main_dish->picture}}" style="height: 215px; width: 430px; object-fit: cover">
+                    <img src="/storage/assets/items/{{$main_dish->picture}}" style="height: 215px; width: 430px; object-fit: cover">
                     <p style="color: gold; margin: auto; font-size: 20px">{{$main_dish->name}}</p>
                 </button>
+                </a>
             </div>
             @endforeach
         </div>
@@ -86,10 +107,12 @@
         <div class=row>
             @foreach ($beverages as $beverage)
             <div class="col-4">
+                <a href="/item/{{$beverage->id}}">
                 <button class="btn btn-dark active" type="button" style="background-color: black; margin-top: 10px; margin-bottom: 10px" >
-                    <img src="{{$beverage->picture}}" style="height: 215px; width: 430px; object-fit: cover">
+                    <img src="/storage/assets/items/{{$beverage->picture}}" style="height: 215px; width: 430px; object-fit: cover">
                     <p style="color: gold; margin: auto; font-size: 20px">{{$beverage->name}}</p>
                 </button>
+                </a>
             </div>
             @endforeach
         </div>
@@ -105,11 +128,18 @@
         <div class=row>
             @foreach ($desserts as $dessert)
             <div class="col-4">
+                <a href="/item/{{$dessert->id}}">
                 <button class="btn btn-dark active" type="button" style="background-color: black; margin-top: 10px; margin-bottom: 10px" >
-                    <img src="{{$dessert->picture}}" style="height: 215px; width: 430px; object-fit: cover">
+                    <img src="/storage/assets/items/{{$dessert->picture}}" style="height: 215px; width: 430px; object-fit: cover">
                     <p style="color: gold; margin: auto; font-size: 20px">{{$dessert->name}}</p>
                 </button>
+                </a>
             </div>
             @endforeach
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>

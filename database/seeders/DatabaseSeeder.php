@@ -60,7 +60,7 @@ class DatabaseSeeder extends Seeder
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
-            'picture' => 'mongolian-beef.jpg',
+            'picture' => 'mongolian-beef.png',
         ]);
 
         DB::table('items')->insert([
@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
-            'picture' => 'mongolian-beef.jpg',
+            'picture' => 'sesame-chicken.jpg',
         ]);
 
         DB::table('items')->insert([

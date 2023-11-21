@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function get_login(Request $request)
+    public function index(Request $request)
     {
         if (auth()->user())
             return redirect('/');
@@ -15,7 +15,7 @@ class LoginController extends Controller
             return view('login');
     }
 
-    public function get_logout(Request $request)
+    public function logout(Request $request)
     {
         if (auth()->user())
         {
