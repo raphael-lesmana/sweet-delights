@@ -29,9 +29,9 @@
         
     </form> 
     @if (sizeof($products) > 0)
+    <div class = "container" style = "margin-left: 0px">
+        <div class = "row row-cols-2">
         @foreach ($products as $product)
-        <div class = "container" style = "margin-left: 0px">
-            <div class = "row">
                 <div class = "col">
                     <div class="card text-white bg-dark mb-3" style="max-width: 700px;">
                     <div class="row g-0">
@@ -56,34 +56,9 @@
                     </div>
                     </div>
                 </div>
-
-                <div class = "col">
-                    <div class="card text-white bg-dark mb-3" style="max-width: 700px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="storage/assets/items/{{ $product->picture }}" class="img-fluid rounded-start" alt="No Picture Found" style="object-fit: cover; height: 100%">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $product->name }}</h5>
-                                <p class="card-text">
-                                    <ul class="list-unstyled">
-                                        <li>Category</li>
-                                        <li>{{ $product->type }}</li>
-                                    </ul>
-                                    <ul class="list-unstyled">
-                                        <li>Description</li>
-                                        <li>{{ $product->brief_description }}</li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-        @endforeach
     @else
         <div class="d-grid gap-2" style="margin-top: 10px; margin-bottom: 10px; margin-left: 100px; margin-right: 100px">
                 <button class="btn btn-dark active" type="button" style="background-color: grey; font-size: 20px; color: white" disabled>

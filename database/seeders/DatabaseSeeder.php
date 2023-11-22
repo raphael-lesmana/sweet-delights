@@ -55,7 +55,43 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'name' => 'Mongolian Beef',
+            'name' => 'Mongolian Beef1',
+            'type' => 'main',
+            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 10,
+            'picture' => 'mongolian-beef.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Mongolian Beef2',
+            'type' => 'main',
+            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 10,
+            'picture' => 'mongolian-beef.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Mongolian Beef3',
+            'type' => 'main',
+            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 10,
+            'picture' => 'mongolian-beef.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Mongolian Beef4',
+            'type' => 'main',
+            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 10,
+            'picture' => 'mongolian-beef.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Mongolian Beef5',
             'type' => 'main',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
