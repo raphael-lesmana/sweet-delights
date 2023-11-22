@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,3 +55,5 @@ Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
 
 Route::get('/settings', [ProfileController::class, 'settings'])->middleware('auth');
 Route::patch('/settings', [ProfileController::class, 'save'])->middleware('auth');
+
+Route::get('/history', [TransactionController::class, 'index'])->middleware('auth');
