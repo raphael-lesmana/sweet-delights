@@ -18,7 +18,7 @@
             <label for="rememberMe" class="form-check-label">Remember Me</label>
         </div>
         <button type="submit" class="btn btn-secondary mb-4" style="width: 400px">Login</button>
-        <div class="mb-4" style="">
+        <div class="mb-4">
             <p class="text-center">Don't have an account?  <a class="text-decoration-none" style="color: yellow" href="register">Sign up</a></p>
         </div>
     </form>

@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Sweet and Sour Pork',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Mapo Tofu',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'General Tso\'s Chicken',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Orange Chicken',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Mongolian Beef1',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Mongolian Beef2',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -74,7 +74,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Mongolian Beef3',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -83,7 +83,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Mongolian Beef4',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -92,7 +92,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Mongolian Beef5',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -101,7 +101,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Sesame Chicken',
-            'type' => 'main',
+            'type' => 'Main Course',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -110,7 +110,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Chinese Tea',
-            'type' => 'beverage',
+            'type' => 'Beverage',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -119,7 +119,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Liang Tea',
-            'type' => 'beverage',
+            'type' => 'Beverage',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -128,7 +128,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Soybean Milk',
-            'type' => 'beverage',
+            'type' => 'Beverage',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -137,7 +137,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Silky Tofu Puding',
-            'type' => 'dessert',
+            'type' => 'Dessert',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -146,7 +146,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Pumpkin Cake',
-            'type' => 'dessert',
+            'type' => 'Dessert',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
@@ -155,7 +155,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('items')->insert([
             'name' => 'Sesame Balls',
-            'type' => 'dessert',
+            'type' => 'Dessert',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
