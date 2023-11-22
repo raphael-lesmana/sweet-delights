@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('type', ['main', 'beverage', 'dessert']);
+            $table->enum('type', ['Main Course', 'Beverage', 'Dessert']);
             $table->string('brief_description');
             $table->string('full_description');
             $table->integer('price')->unsigned();
