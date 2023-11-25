@@ -9,8 +9,10 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">XiAO DiNG DoNG</a>
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="#" style="color: gold">
+                XiAO DiNG DoNG
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,12 +54,14 @@
                     </li>
                     @endauth
                     @guest
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/login" style="color:gold">Log In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/register" style="color:gold">Register</a>
-                        </li>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/login" style="color:gold">Log In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/register" style="color:gold">Register</a>
+                            </li>
+                        </ul>
                     @endguest
                 </ul>
             </div>
