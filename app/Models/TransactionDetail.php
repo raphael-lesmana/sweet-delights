@@ -11,9 +11,13 @@ class TransactionDetail extends Model
         'transaction_header_id',
         'qty'
     ];
-    public function transaction_header()
+    public function transactionHeader()
     {
         return $this->belongsTo(TransactionHeader::class);
+    }
+    public function item()
+    {
+        return $this->belongsTo(Item::class);
     }
     use HasFactory;
 }
