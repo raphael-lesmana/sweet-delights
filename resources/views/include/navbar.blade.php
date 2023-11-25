@@ -70,7 +70,7 @@
     
 <div class="bg-image" 
     style="background-image: url(storage/assets/background-img/background.png); height: 100vh; overflow: scroll">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.9); background-size: cover; height: 100vh; overflow: scroll">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.8); background-size: cover; height: 100vh; overflow: scroll">
         <div style="margin-top: 25px; margin-left: 100px">
             @yield('content')
         </div>
