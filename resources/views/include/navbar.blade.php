@@ -53,10 +53,10 @@
                     @endauth
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link active" href="/login">Log In</a>
+                            <a class="nav-link active" href="/login" style="color:gold">Log In</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/register">Register</a>
+                            <a class="nav-link active" href="/register" style="color:gold">Register</a>
                         </li>
                     @endguest
                 </ul>
