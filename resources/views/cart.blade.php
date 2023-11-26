@@ -15,7 +15,36 @@
         </p>
     </div>
     @else
-    <ul>
+    <table class="table table-bordered" style="color:white">
+        <thead class="table-dark" style="background-color: black">
+            <tr class="table-dark" style="text-align: center">
+                <th scope="col">Food</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+        <ul>
+            @foreach ($cart_items as $cart_item)
+            <tr>
+                <td>{{ $cart_item->item->name }}</td>
+                <td>{{ $cart_item->item->price }}</td>
+                <td>{{ $cart_item->qty }}</td>
+                <td>{{ $cart_item->item->price }}*{{ $cart_item->qty }}</td>
+                <td><button type="submit" class="btn btn-dark">Remove</button></td>
+            </tr>
+            $total += {{ $cart_item->item->price }}
+            @endforeach
+        </ul>
+        </tbody>
+    </table>
+
+    <span style="text-align: right">Total: {{ $total }}</span>
+    <a href="/checkout"><button>Proceed to Checkout</button></a>
+    <br>
+    <ul style="color:white">
     <?php
     foreach ($cart_items as $cart_item)
     {
