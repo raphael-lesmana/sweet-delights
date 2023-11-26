@@ -32,7 +32,7 @@
                 <td>{{ $cart_item->item->name }}</td>
                 <td>{{ $cart_item->item->price }}</td>
                 <td>{{ $cart_item->qty }}</td>
-                <td>{{ $cart_item->item->price }}*{{ $cart_item->qty }}</td>
+                <td>{{ $cart_item->item->price * $cart_item->qty }}</td>
                 <td><button type="submit" class="btn btn-dark">Remove</button></td>
             </tr>
             $total += {{ $cart_item->item->price }}
