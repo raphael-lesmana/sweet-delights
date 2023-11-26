@@ -3,12 +3,12 @@
 @section('title', 'Food Description')
 
 @section('content')
-<div class="d-grid col-6 mx-auto btn btn-dark active mt-5" style="color: gold; font-size: 30px" diasbled>
+<div class="d-grid col-6 mx-auto btn btn-dark active mt-5" style="color: gold; font-size: 30px; background-color: black" diasbled>
     食物细节 | Food Detail
 </div>
 
-<div class="card text-white col-11 mx-auto bg-dark mb-3">
-    <div class="row g-0">
+<div class="card text-white col-11 mx-auto bg-dark mb-3" style="background-color: black">
+    <div class="row g-0" style="background-color: black">
         <div class="col-md-6">
             <img src="/storage/assets/items/{{ $item->picture }}" class="img-fluid rounded-start" alt="No Picture Found" style="object-fit: cover; height: 100%">
         </div>
