@@ -3,114 +3,81 @@
 @section('title', 'Checkout')
 
 @section('content')
-<div class="card text-gold col-6 mx-auto mb-3" style="background-color:black; color: gold; font-size: 30px; text-align: center;">
+<div class="card text-gold col-8 mx-auto mb-3" style="background-color:black; color: gold; font-size: 30px; text-align: center;">
     查看 | Checkout
 </div>
 
-<div>
-    <p class="col-6 mx-auto" style="color: white; font-size: 25px">Billing Information</p>
+<div class="col-8 mx-auto">
+    <p class="mb-1" style="color: white; font-size: 25px">Billing Information</p>
     <form action="/settings" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="_method" value="PATCH">
-        <div class="row col-6 mx-auto">
-            <div class="col-md-6 mb-3" style="text-align:left">
+        <div class="row d-flex justify-content-between">
+            <div class="col mb-3" style="text-align:left">
                 <label for="name" class="form-label" style="color: gold; font-size: 20px">
-                    <div class="card text-gold" style="background-color: black">Username</div>
+                    <div class="card text-gold" style="background-color: black">Full Name</div>
                 </label>
-                <input type="text" class="form-control" name="name" placeholder="Minimum 5 characters">
+                <input type="text" class="form-control" name="name" placeholder="Min 5 characters">
+            </div>
+
+            <div class="col mb-3" style="text-align:left">
+                <label for="phonenumber" class="form-label" style="color: gold; font-size: 20px">
+                    <div class="card text-gold" style="background-color: black">Phone Number</div>
+                </label>
+                <input type="number" class="form-control" name="phonenumber" placeholder="Has to be 12 numbers">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-6 mb-3" style="text-align:left">
+                <label for="country" class="form-label" style="color: gold; font-size: 20px">
+                    <div class="card text-gold" style="background-color: black">Country</div>
+                </label>
+                <input type="text" class="form-control" name="country" placeholder="Afghanistan">
             </div>
 
             <div class="col-md-6 mb-3" style="text-align:left">
-                <label for="email" class="form-label" style="color: gold; font-size: 20px">
-                    <div class="card text-gold" style="background-color: black">Email</div>
+                <label for="city" class="form-label" style="color: gold; font-size: 20px">
+                    <div class="card text-gold" style="background-color: black">City</div>
                 </label>
-                <input type="email" class="form-control" name="email" placeholder="Must end with '@gmail.com'">
+                <input type="text" class="form-control" name="city" placeholder="Min 5 Characters">
             </div>
         </div>
 
-        <div class="col-4 mb-3 mx-auto" style="text-align:left">
-            <label for="phone" class="form-label" style="color: gold; font-size: 20px">
-                <div class="card text-gold" style="background-color: black">Phone Number</div>
-            </label>
-            <input type="text" class="form-control" name="phone" placeholder="Must contain 12 digits">
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-6 mb-3" style="text-align:left">
+                <label for="cardname" class="form-label" style="color: gold; font-size: 20px">
+                    <div class="card text-gold" style="background-color: black">Card Name</div>
+                </label>
+                <input type="text" class="form-control" name="cardname" placeholder="Min 3 Characters">
+            </div>
+
+            <div class="col-md-6 mb-3" style="text-align:left">
+                <label for="cardnumber" class="form-label" style="color: gold; font-size: 20px">
+                    <div class="card text-gold" style="background-color: black">Card Number</div>
+                </label>
+                <input type="number" class="form-control" name="cardnumber" placeholder="Must be numerical and have 16 characters">
+            </div>
         </div>
-        
-        <div class="col-4 mb-3 mx-auto" style="text-align:left">
+
+        <p class="mb-1" style="color: white; font-size: 25px;">Additional Information</p>
+
+        <div class="mb-3 mx-auto" style="text-align:left">
             <label for="address" class="form-label" style="color: gold; font-size: 20px">
                 <div class="card text-gold" style="background-color: black">Address</div>
             </label>
-            <input type="text" class="form-control" name="address" placeholder="Not mandatory, minimum 5 characters">
-        </div>
-
-        <div class="col-4 mb-3 mx-auto" style="text-align:left">
-            <label for="picture" class="form-label" style="color: gold; font-size: 20px">
-                <div class="card text-gold" style="background-color: black">Profile picture</div>
-            </label>
-            <input type="file" class="form-control" name="picture">
-        </div>
-
-        <div class="col-4 mb-3 mx-auto" style="text-align:left">
-            <label for="currpassword" class="form-label" style="color: gold; font-size: 20px">
-                <div class="card text-gold" style="background-color: black">Current Password</div>
-            </label>
-            <input type="password" class="form-control" name="currpassword" placeholder="Has to be the same as the current password">
-        </div>
-
-        <div class="col-4 mb-3 mx-auto" style="text-align:left">
-            <label for="newpassword" class="form-label" style="color: gold; font-size: 20px">
-                <div class="card text-gold" style="background-color: black">New Password</div>
-            </label>
-            <input type="password" class="form-control" name="newpassword" placeholder="5-255 characters">
-        </div>
-
-        <div class="col-4 mb-3 mx-auto" style="text-align:left">
-            <label for="conpassword" class="form-label" style="color: gold; font-size: 20px">
-                <div class="card text-gold" style="background-color: black">New Password</div>
-            </label>
-            <input type="password" class="form-control" name="conpassword" placeholder="Must be the same as the new password">
+            <textarea class="form-control" name="address" placeholder="Min 5 Characters"></textarea>
         </div>
         
-        <div class="col-4 mx-auto" style="text-align:right">
-            <button class="btn btn-dark" type="submit" style="color: gold; background-color: black">Update Profile</button>
+        <div class="mb-3 mx-auto" style="text-align:left">
+            <label for="zipcode" class="form-label" style="color: gold; font-size: 20px">
+                <div class="card text-gold" style="background-color: black">ZIP/Postal Code</div>
+            </label>
+            <input type="number" class="form-control" name="zipcode" placeholder="Fill with number only">
         </div>
-    </form>
-</div>
-
-
-<button class="btn btn-dark" style="width: 655px; color: gold; margin-bottom: 30px">查看 | Checkout</button>
-<p style="color: white">Billing Information</p>
-<form action="/checkout" method="POST">
-    @csrf
-    <div class="grid">
-        <div class="row">
-            <div class="col-6">
-                <label>Full name</label>
-                <input type="text" style="width: 300px; margin-bottom: 10px" name="full_name" placeholder="Min 5 Characters"><br>
-
-                <label>Country</label>
-                <input type="text" style="width: 300px; margin-bottom: 10px" name="country" placeholder="Afghanistan"><br>
-
-                <label>Card Name</label>
-                <input type="text" style="width: 300px; margin-bottom: 10px" name="card_name" placeholder="Min 3 Characters">
-            </div>
-
-            <div class="col-6">
-                <label>Phone Number</label>
-                <input type="text" style="width: 300px; margin-bottom: 10px" name="phone" placeholder="Has to be 12 numbers"><br>
-
-                <label>City</label>
-                <input type="text" style="width: 300px; margin-bottom: 10px" name="city" placeholder="Min 5 Characters"><br>
-
-                <label>Card Number</label>
-                <input type="text" style="width: 300px; margin-bottom: 10px" name="number" placeholder="Must be numerical and have 16 characters">
-            </div>
+        <div style="text-align: right">
+            <button type="submit" class="btn" style="color:gold; background-color: black">Cancel</button>
+            <button type="submit" class="btn" style="color:gold; background-color: black">Place Order</button>
         </div>
-    </div>
-    <p style="color: white">Additional Information</p>
-    <label>Address</label>
-    <textarea type="text" style="width: 650px; margin-bottom: 10px" placeholder="Min 5 Characters"  name="address"></textarea><br>
-    <label>Zip/Postal Code</label>
-    <input type="number" style="width: 650px" placeholder="Fill with number only" name="zip"><br>
-    <button>Order</button>
 </form>
 @endsection
