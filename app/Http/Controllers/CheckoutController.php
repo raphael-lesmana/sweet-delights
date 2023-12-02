@@ -15,16 +15,16 @@ class CheckoutController extends Controller
 
     public function checkout(Request $request)
     {
-        // $request->validate([
-        //     'full_name' => 'required|min:5',
-        //     'phone' => 'required|digits:12',
-        //     'address' => 'required|min:5',
-        //     'city' => 'required|min:5',
-        //     'card_name' => 'required|min:3',
-        //     'card_number' => 'required|min:16',
-        //     'country' => 'required',
-        //     'zip' => 'required|numeric'
-        // ]);
+        $request->validate([
+            'full_name' => 'required|min:5',
+            'phone' => 'required|digits:12',
+            'address' => 'required|min:5',
+            'city' => 'required|min:5',
+            'card_name' => 'required|min:3',
+            'card_number' => 'required|min:16',
+            'country' => 'required',
+            'zip' => 'required|numeric'
+        ]);
 
         $header = auth()->user()->transaction_header()->create();
         $cart = CartItem::whereBelongsTo(auth()->user());

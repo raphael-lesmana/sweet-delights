@@ -26,7 +26,6 @@
             </tr>
         </thead>
         <tbody>
-        <ul>
             @foreach ($cart_items as $cart_item)
             <tr>
                 <td>{{ $cart_item->item->name }}</td>
@@ -37,25 +36,12 @@
             </tr>
             $total += {{ $cart_item->item->price }}
             @endforeach
-        </ul>
         </tbody>
     </table>
 
-    <span style="text-align: right">Total: {{ $total }}</span>
+    <span style="text-align: right; color: white;">Total: {{ $total }}</span>
     <a href="/checkout"><button>Proceed to Checkout</button></a>
     <br>
-    <ul style="color:white">
-    <?php
-    foreach ($cart_items as $cart_item)
-    {
-        echo '<li>'. $cart_item->item->name . ' ' . $cart_item->item->price . ' ' . $cart_item->qty . '</li>';
-        $total += $cart_item->item->price;
-    }
-    ?>
-    </ul>
-    <span>Total: <?php echo $total ?></span>
-
-    <a href="/checkout"><button>Proceed to Checkout</button></a>
     @endif
 </div>
 

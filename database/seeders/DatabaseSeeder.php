@@ -127,6 +127,15 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
+            'name' => 'Beef Tea',
+            'type' => 'Beverage',
+            'brief_description' => 'Peccatores sumus, itaque Deus nos reliquit',
+            'full_description' => 'Nous sommes pécheurs, et Dieu nous a quitté',
+            'price' => 123,
+            'picture' => 'meat-tea.jpg',
+        ]);
+
+        DB::table('items')->insert([
             'name' => 'Soybean Milk',
             'type' => 'Beverage',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',

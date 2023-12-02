@@ -9,7 +9,7 @@
     <form style="margin-bottom: 30px" action="/search" method="get">
         @csrf
         <div class="d-inline-flex mb-3">
-            <input class="form-control me-2" type="search" placeholder="Enter food name" name="search" style="width: 700px">
+            <input class="form-control me-2" type="search" placeholder="Enter food name" name="search" style="width: 700px" value={{$last_query}}>
             <button class="btn btn-dark">Search</button>
         </div>
         
@@ -17,13 +17,19 @@
         <div class="mb-3 radio-inline" style="color: white">
             Filter By Category
 
-            <input type="checkbox" id="main-course" class = "form-check-input" style="margin-left: 10px" name="main">
+            <input type="checkbox" id="main-course" class = "form-check-input" style="margin-left: 10px" name="main" @if ($categories_b['Main Course'])
+                checked
+            @endif>
             <label for="main-course" class="form-check-label" >Main Course</label>
 
-            <input type="checkbox" id="beverages" class = "form-check-input" style="margin-left: 10px" name="beverages">
+            <input type="checkbox" id="beverages" class = "form-check-input" style="margin-left: 10px" name="beverage" @if ($categories_b['Beverage'])
+                checked
+            @endif>
             <label for="beverages">Beverages</label>
 
-            <input type="checkbox" id="dessert" class = "form-check-input" style="margin-left: 10px" name="dessert">
+            <input type="checkbox" id="dessert" class = "form-check-input" style="margin-left: 10px" name="dessert" @if ($categories_b['Dessert'])
+            checked
+            @endif>
             <label for="dessert">Dessert</label>
         </div>
         

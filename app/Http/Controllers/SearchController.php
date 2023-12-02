@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
@@ -20,10 +21,24 @@ class SearchController extends Controller
         $request->validate([
             'search' => 'required'
         ]);
+        $last_query = $request->search;
 
-        $category = [$request];
-
-        $products = Item::where("name", "LIKE", "%$request->search%")->get();
-        return view('searchresults', compact('products'));
+        $categories_b = [
+            'Main Course' => $request->main,
+            'Beverage' => $request->beverage,
+            'Dessert' => $request->dessert,
+        ];
+        $categories = [];
+        
+        foreach ($categories_b as $key => $value)
+        {
+            if (!$value)
+                continue;
+            $categories[] = $key;
+        }
+        
+        $products = Item::where("name", "LIKE", "%$request->search%")->whereIn('type', $categories);
+        $products = $products->get();
+        return view('searchresults', compact('products', 'last_query', 'categories_b'));
     }
 }

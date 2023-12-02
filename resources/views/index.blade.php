@@ -6,23 +6,25 @@
     <h1 style="color: gold; margin-bottom: 25px">
         菜单 | Menu
     </h1>
-    <button type="button" class="btn btn-dark" style="font-size: 15px; color:gold">
+    <button onclick="main_course()" type="button" class="btn btn-dark" style="font-size: 15px; color:gold">
         主菜 | Main Course
     </button>
-    <button type="button" class="btn btn-dark" style="font-size: 15px; color:gold">
+    <button onclick="beverage()" type="button" class="btn btn-dark" style="font-size: 15px; color:gold">
         饮料 | Beverages
     </button>
-    <button type="button" class="btn btn-dark" style="font-size: 15px; color:gold">
+    <button onclick="dessert()" type="button" class="btn btn-dark" style="font-size: 15px; color:gold">
         甜点 | Desserts
     </button>
 
+    <div id="main-heading">
     <div class="d-grid gap-2" style="margin-top: 10px; margin-bottom: 10px">
         <button class="btn btn-dark active" type="button" style="background-color: black; font-size: 25px; color: gold" disabled>
             主菜 | Main Course
         </button>
     </div>
+    </div>
 
-    <div class=grid>
+    <div class=grid id="main-grid">
         <div class=row>
             @foreach ($main_dishes as $main_dish)
             <div class="col-4">
@@ -37,13 +39,16 @@
         </div>
     </div>
 
-    <div class="d-grid gap-2" style="margin-top: 10px; margin-bottom: 10px">
-        <button class="btn btn-dark active" type="button" style="background-color: black; font-size: 25px; color: gold" disabled>
-            饮料 | Beverages
-        </button>
+    <div id="beverage-heading">
+        <div class="d-grid gap-2" style="margin-top: 10px; margin-bottom: 10px">
+            <button class="btn btn-dark active" type="button" style="background-color: black; font-size: 25px; color: gold" disabled>
+                饮料 | Beverages
+            </button>
+        </div>
     </div>
 
-    <div class=grid>
+
+    <div class=grid id="beverage-grid">
         <div class=row>
             @foreach ($beverages as $beverage)
             <div class="col-4">
@@ -58,13 +63,15 @@
         </div>
     </div>
 
+    <div id="dessert-heading">
     <div class="d-grid gap-2" style="margin-top: 10px; margin-bottom: 10px">
         <button class="btn btn-dark active" type="button" style="background-color: black; font-size: 25px; color: gold" disabled>
             甜点 | Desserts
         </button>
     </div>
+    </div>
 
-    <div class=grid>
+    <div class=grid id="dessert-grid">
         <div class=row>
             @foreach ($desserts as $dessert)
             <div class="col-4">
@@ -80,4 +87,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
 @endsection

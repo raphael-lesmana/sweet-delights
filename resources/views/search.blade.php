@@ -17,13 +17,13 @@
         <div class="mb-3 radio-inline" style="color: white">
             Filter By Category
 
-            <input type="checkbox" id="main-course" class = "form-check-input" style="margin-left: 10px" name="main">
+            <input type="checkbox" id="main-course" class = "form-check-input" style="margin-left: 10px" name="main" checked>
             <label for="main-course" class="form-check-label" >Main Course</label>
 
-            <input type="checkbox" id="beverages" class = "form-check-input" style="margin-left: 10px" name="beverages">
+            <input type="checkbox" id="beverages" class = "form-check-input" style="margin-left: 10px" name="beverage" checked> 
             <label for="beverages">Beverages</label>
 
-            <input type="checkbox" id="dessert" class = "form-check-input" style="margin-left: 10px" name="dessert">
+            <input type="checkbox" id="dessert" class = "form-check-input" style="margin-left: 10px" name="dessert" checked>
             <label for="dessert">Dessert</label>
         </div>
         

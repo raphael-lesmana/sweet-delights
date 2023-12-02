@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\TransactionDetail;
 use App\Models\TransactionHeader;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class TransactionController extends Controller
 {
