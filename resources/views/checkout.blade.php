@@ -9,22 +9,21 @@
 
 <div class="col-8 mx-auto">
     <p class="mb-1" style="color: white; font-size: 25px">Billing Information</p>
-    <form action="/settings" method="POST" enctype="multipart/form-data">
+    <form action="/checkout" method="POST" enctype="multipart/form-data">
         @csrf
-        <input type="hidden" name="_method" value="PATCH">
         <div class="row d-flex justify-content-between">
             <div class="col mb-3" style="text-align:left">
                 <label for="name" class="form-label" style="color: gold; font-size: 20px">
                     <div class="card text-gold" style="background-color: black">Full Name</div>
                 </label>
-                <input type="text" class="form-control" name="name" placeholder="Min 5 characters">
+                <input type="text" class="form-control" name="full_name" placeholder="Min 5 characters">
             </div>
 
             <div class="col mb-3" style="text-align:left">
                 <label for="phonenumber" class="form-label" style="color: gold; font-size: 20px">
                     <div class="card text-gold" style="background-color: black">Phone Number</div>
                 </label>
-                <input type="number" class="form-control" name="phonenumber" placeholder="Has to be 12 numbers">
+                <input type="text" class="form-control" name="phone" placeholder="Has to be 12 numbers">
             </div>
         </div>
 
@@ -49,14 +48,14 @@
                 <label for="cardname" class="form-label" style="color: gold; font-size: 20px">
                     <div class="card text-gold" style="background-color: black">Card Name</div>
                 </label>
-                <input type="text" class="form-control" name="cardname" placeholder="Min 3 Characters">
+                <input type="text" class="form-control" name="card_name" placeholder="Min 3 Characters">
             </div>
 
             <div class="col-md-6 mb-3" style="text-align:left">
                 <label for="cardnumber" class="form-label" style="color: gold; font-size: 20px">
                     <div class="card text-gold" style="background-color: black">Card Number</div>
                 </label>
-                <input type="number" class="form-control" name="cardnumber" placeholder="Must be numerical and have 16 characters">
+                <input type="text" class="form-control" name="card_number" placeholder="Must be numerical and have 16 characters">
             </div>
         </div>
 
@@ -73,7 +72,7 @@
             <label for="zipcode" class="form-label" style="color: gold; font-size: 20px">
                 <div class="card text-gold" style="background-color: black">ZIP/Postal Code</div>
             </label>
-            <input type="number" class="form-control" name="zipcode" placeholder="Fill with number only">
+            <input type="number" class="form-control" name="zip" placeholder="Fill with number only">
         </div>
         <div style="text-align: right">
             <button type="submit" class="btn" style="color:gold; background-color: black">Cancel</button>

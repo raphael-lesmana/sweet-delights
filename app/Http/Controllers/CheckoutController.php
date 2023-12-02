@@ -37,6 +37,6 @@ class CheckoutController extends Controller
             ]);
         }
         $cart->delete();
-        return view('success');
+        return redirect('/');
     }
 }

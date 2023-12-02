@@ -50,6 +50,7 @@ Route::get('/update/{id}', [ItemController::class, 'update_index'])->middleware(
 Route::patch('/update/{id}', [ItemController::class, 'update'])->middleware('auth');
 
 Route::get('/cart', [CartItemController::class, 'display'])->middleware('auth');
+Route::post('/cart', [CartItemController::class, 'process'])->middleware('auth');
 
 Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
 

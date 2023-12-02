@@ -6,7 +6,6 @@
 
 <div style="margin-left: 100px; margin-top: 25px; margin-right: 100px">
     <h1 style="color: gold; margin-bottom: 30px">你的购物车 | Your Cart</h1>
-    <?php $total = 0 ?>
     @if($cart_items==NULL)
     <div class="card" style="text-align: center; background-color: grey">
         <h4 class="mt-3" style="color: gold">Your cart is empty...</h4>
@@ -30,18 +29,27 @@
             <tr>
                 <td>{{ $cart_item->item->name }}</td>
                 <td>{{ $cart_item->item->price }}</td>
-                <td>{{ $cart_item->qty }}</td>
+                <td><form action="/cart" method="POST">
+                    @csrf
+                    <input type="hidden" name="item_id" value={{$cart_item->item->id}}>
+                    <button name="action_type" value="dec">-</button>
+                    {{ $cart_item->qty }}
+                    <button name="action_type" value="inc">+</button>
+                </form></td>
                 <td>{{ $cart_item->item->price * $cart_item->qty }}</td>
-                <td><button type="submit" class="btn btn-dark">Remove</button></td>
+                <td><form action="/cart" method="POST">
+                    @csrf
+                    <input type="hidden" name="action_type" value="delete">
+                    <input type="hidden" name="remove_id" value={{$cart_item->item->id}}>
+                    <button type="submit" class="btn btn-dark">Remove</button></form></td>
             </tr>
-            $total += {{ $cart_item->item->price }}
             @endforeach
         </tbody>
     </table>
 
     <span style="text-align: right; color: white;">Total: {{ $total }}</span>
-    <a href="/checkout"><button>Proceed to Checkout</button></a>
     <br>
+    <a href="/checkout"><button class="btn btn-primary">Proceed to Checkout</button></a>
     @endif
 </div>
 

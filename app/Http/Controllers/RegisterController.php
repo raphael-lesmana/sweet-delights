@@ -35,11 +35,4 @@ class RegisterController extends Controller
 
         return redirect("/");
     }
-
-    public function attributes(): array
-    {
-        return [
-            'conPassword' => 'password confirmation',
-        ];
-    }
 }

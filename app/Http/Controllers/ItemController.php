@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CartItem;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -30,6 +31,16 @@ class ItemController extends Controller
         $item = Item::find($id);
         if (!isset($item))
             abort(404);
+        $check = CartItem::where([
+            'user_id' => auth()->user()->id,
+            'item_id' => $id,
+        ]);
+
+        if (sizeof($check->get()) > 0)
+        {
+            $check = $check->increment('qty');
+            return back();
+        }
 
         auth()->user()->cart_item()->create([
             'item_id' => $id,
@@ -83,14 +94,28 @@ class ItemController extends Controller
         if (!Gate::allows('admin'))
             abort(403);
 
-        $request->validate([
-            'search' => 'required'
-        ]);
-
-        $category = [$request];
-
-        $products = Item::where("name", "LIKE", "%$request->search%")->get();
-        return view('manageresults', compact('products'));
+            $request->validate([
+                'search' => 'required'
+            ]);
+            $last_query = $request->search;
+    
+            $categories_b = [
+                'Main Course' => $request->main,
+                'Beverage' => $request->beverage,
+                'Dessert' => $request->dessert,
+            ];
+            $categories = [];
+            
+            foreach ($categories_b as $key => $value)
+            {
+                if (!$value)
+                    continue;
+                $categories[] = $key;
+            }
+            
+            $products = Item::where("name", "LIKE", "%$request->search%")->whereIn('type', $categories);
+            $products = $products->get();
+            return view('manageresults', compact('products', 'last_query', 'categories_b'));
     }
 
     public function delete(Request $request)
