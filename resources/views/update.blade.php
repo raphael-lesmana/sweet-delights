@@ -10,18 +10,18 @@
     <textarea name="full_description" placeholder="Maximum 255 characters">{{$item->full_description}}</textarea><br>
     <label for="brief_description">Category</label>
     <select name="type">
-        <option value="main"
-        @if ($item->type == "main")
+        <option value="Main Course"
+        @if ($item->type == "Main Course")
             selected
         @endif
         >Main dish</option>
-        <option value="beverage"
-        @if ($item->type == "beverage")
+        <option value="Beverage"
+        @if ($item->type == "Beverage")
             selected
         @endif>
         Beverage</option>
-        <option value="dessert" 
-        @if ($item->type == "dessert")
+        <option value="Dessert" 
+        @if ($item->type == "Dessert")
             selected
         @endif>Dessert</option>
     </select><br>
@@ -29,5 +29,5 @@
     <input type="number" name="price" value="{{$item->price}}"><br>
     <label for="picture">Image file</label>
     <input type="file" name="picture"><br>
-    <button>Add</button>
+    <button>Update</button>
 </form>

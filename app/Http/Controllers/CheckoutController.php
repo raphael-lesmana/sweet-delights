@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CartItem;
+use App\Models\TransactionDetail;
 use App\Models\TransactionHeader;
 use Illuminate\Http\Request;
 
@@ -26,13 +27,15 @@ class CheckoutController extends Controller
             'zip' => 'required|numeric'
         ]);
 
-        $header = auth()->user()->transaction_header()->create();
         $cart = CartItem::whereBelongsTo(auth()->user());
         $cart_items = $cart->get();
+        $header = auth()->user()->transaction_header()->create();
         foreach ($cart_items as $cart_item)
         {
-            $cart_item->item->transaction_detail()->create([
+            TransactionDetail::create([
                 'transaction_header_id' => $header->id,
+                'item_name' => $cart_item->item->name,
+                'item_price' => $cart_item->item->price,
                 'qty' => $cart_item->qty,
             ]);
         }
