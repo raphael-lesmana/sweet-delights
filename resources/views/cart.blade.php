@@ -7,11 +7,26 @@
 <div style="margin-left: 100px; margin-top: 25px; margin-right: 100px">
     <h1 style="color: gold; margin-bottom: 30px">你的购物车 | Your Cart</h1>
     @if(sizeof($cart_items)==0)
-    <div class="card" style="text-align: center; background-color: grey">
+    <!-- <div class="card" style="text-align: center; background-color: grey;">
         <h4 class="mt-3" style="color: gold">Your cart is empty...</h4>
         <p>Looks like your cart is on a diet! Don't worry, our delicious dishes are just a few clicks away. 
             Start filling up your cart and let the feast begin!
         </p>
+    </div> -->
+    <div class="cintainer text-center">
+        <div class="row align-items-center">
+            <div class="card mx-auto d-flex align-items-center justify-content-center" style="width: 70vw; background-color: black; color: white; vertical-align: middle">           
+                <div class="card-body">
+                    <div class="mx-auto" style="font-weight: bold; color: gold; text-align: center; font-size: 30px">
+                        Your cart is empty...
+                    </div>
+                    <div style="font-size: 20px">
+                        Looks like your cart is on a diet! Don't worry, our delicious dishes are just a few clicks away. 
+                        Start filling up your cart and let the feast begin!
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     @else
     <table class="table table-bordered" style="border-color:black; ">
