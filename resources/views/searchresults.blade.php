@@ -66,10 +66,13 @@
             </div>
         </div>
     @else
-        <div class="d-grid gap-2" style="margin-top: 10px; margin-bottom: 10px; margin-left: 100px; margin-right: 100px">
-                <button class="btn btn-dark active" type="button" style="background-color: grey; font-size: 20px; color: white" disabled>
+        <div class="card mx-auto" style="width: 70vw; display:flex; align-items: center; background-color: black; color: white">
+            <div class="card-body">
+                Food is not available
+            </div>
+                <!-- <button class="btn btn-dark active" type="button" style="background-color: grey; font-size: 20px; color: white" disabled>
                     Food is not available
-                </button>
+                </button> -->
         </div>
     @endif
 </div>

@@ -14,9 +14,9 @@
         </p>
     </div>
     @else
-    <table class="table table-bordered" style="color:white">
-        <thead class="table-dark" style="background-color: black">
-            <tr class="table-dark" style="text-align: center">
+    <table class="table table-bordered" style="border-color:black; ">
+        <thead class="table" style="background-color: black">
+            <tr class="table" style="background-color: black; text-align: center; color: gold; border-color:black">
                 <th scope="col">Food</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
@@ -26,15 +26,15 @@
         </thead>
         <tbody>
             @foreach ($cart_items as $cart_item)
-            <tr>
+            <tr class="align-middle" style="background-color: dimgrey; color: white; text-align: center; font-weight: bold">
                 <td>{{ $cart_item->item->name }}</td>
                 <td>{{ $cart_item->item->price }}</td>
                 <td><form action="/cart" method="POST">
                     @csrf
                     <input type="hidden" name="item_id" value={{$cart_item->item->id}}>
-                    <button name="action_type" value="dec">-</button>
+                    <button class ="minus bg-dark" name="action_type" value="dec">-</button>
                     {{ $cart_item->qty }}
-                    <button name="action_type" value="inc">+</button>
+                    <button class ="plus bg-dark" name="action_type" value="inc">+</button>
                 </form></td>
                 <td>{{ $cart_item->item->price * $cart_item->qty }}</td>
                 <td><form action="/cart" method="POST">
@@ -46,10 +46,11 @@
             @endforeach
         </tbody>
     </table>
-
-    <span style="text-align: right; color: white;">Total: {{ $total }}</span>
-    <br>
-    <a href="/checkout"><button class="btn btn-primary">Proceed to Checkout</button></a>
+    <div class="text-end">
+        <span style="text-align: right; color: white; font-size: 30px; font-weight: bold">Total Price: ${{ $total }}</span>
+        <br>
+        <a href="/checkout"><button class="btn btn-dark mt-2" style="background-color: black; color: gold">Proceed to Checkout</button></a>
+    </div>
     @endif
 </div>
 

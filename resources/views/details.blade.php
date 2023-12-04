@@ -7,7 +7,7 @@
     食物细节 | Food Detail
 </div>
 
-<div class="card text-white col-11 mx-auto bg-dark mb-3" style="background-color: black">
+<div class="card text-white col-11 mx-auto bg-dark mb-3">
     <div class="row g-0" style="background-color: black">
         <div class="col-md-6">
             <img src="/storage/assets/items/{{ $item->picture }}" class="img-fluid rounded-start" alt="No Picture Found" style="object-fit: cover; height: 100%">
@@ -38,7 +38,7 @@
                     {{-- should use ajax --}}
                     <form action="/item/{{$item->id}}" method="POST">
                         @csrf
-                        <button class="btn btn-secondary mt-3" style="font-size: 20px; color: gold">Add to Cart</button>
+                        <button class="btn btn-secondary mt-3" style="font-size: 20px; color: white">Add to Cart</button>
                     </form>
                     @endif
                     @endauth
