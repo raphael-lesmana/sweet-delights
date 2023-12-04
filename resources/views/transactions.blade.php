@@ -19,9 +19,26 @@
                 </div>
             </div>
         @else
-            @foreach ($transactions as $transaction)
-                <li> TR{{str_pad($transaction->transactionHeader->id, 3, "0", STR_PAD_LEFT)}} {{date_format($transaction->created_at, "Y-m-d")}} {{$transaction->item_name}} [x{{$transaction->qty}}] ${{$transaction->item_price * $transaction->qty}}</li>
-            @endforeach
+        <table class="table table-bordered" style="border-color:black; ">
+            <thead class="table" style="background-color: black">
+                <tr class="table" style="background-color: black; text-align: center; color: gold; border-color:black">
+                    <th scope="col">Transaction ID</th>
+                    <th scope="col">Purchase Date</th>
+                    <th scope="col">Food Name</th>
+                    <th scope="col">Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($transactions as $transaction)
+                <tr class="align-middle" style="background-color: dimgrey; color: white; text-align: center; font-weight: bold">
+                    <td>TR{{str_pad($transaction->transactionHeader->id, 3, "0", STR_PAD_LEFT)}}</td>
+                    <td>{{date_format($transaction->created_at, "Y-m-d")}}</td>
+                    <td>{{$transaction->item_name}} [x{{$transaction->qty}}]</td>
+                    <td>${{$transaction->item_price * $transaction->qty}}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
         @endif
     </ul>
 </div>
