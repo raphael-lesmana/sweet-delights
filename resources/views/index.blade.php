@@ -17,11 +17,11 @@
     </button>
 
     <div id="main-heading">
-    <div class="d-grid gap-2" style="margin-top: 10px; margin-bottom: 10px">
-        <button class="btn btn-dark active" type="button" style="background-color: black; font-size: 25px; color: gold" disabled>
-            主菜 | Main Course
-        </button>
-    </div>
+        <div class="card mx-auto" style="margin-top: 10px; margin-bottom: 10px; align-items: center; background-color: black; ">
+            <div class="card-body" style= "color: gold; font-size: 25px">
+                主菜 | Main Course
+            </div>
+        </div>
     </div>
 
     <div class=grid id="main-grid">
@@ -40,10 +40,10 @@
     </div>
 
     <div id="beverage-heading">
-        <div class="d-grid gap-2" style="margin-top: 10px; margin-bottom: 10px">
-            <button class="btn btn-dark active" type="button" style="background-color: black; font-size: 25px; color: gold" disabled>
+        <div class="card mx-auto" style="margin-top: 10px; margin-bottom: 10px; align-items: center; background-color: black; ">
+            <div class="card-body" style= "color: gold; font-size: 25px">
                 饮料 | Beverages
-            </button>
+            </div>
         </div>
     </div>
 
@@ -64,11 +64,11 @@
     </div>
 
     <div id="dessert-heading">
-    <div class="d-grid gap-2" style="margin-top: 10px; margin-bottom: 10px">
-        <button class="btn btn-dark active" type="button" style="background-color: black; font-size: 25px; color: gold" disabled>
-            甜点 | Desserts
-        </button>
-    </div>
+        <div class="card mx-auto" style="margin-top: 10px; margin-bottom: 10px; align-items: center; background-color: black; ">
+            <div class="card-body" style= "color: gold; font-size: 25px">
+                甜点 | Desserts
+            </div>
+        </div>
     </div>
 
     <div class=grid id="dessert-grid">
