@@ -5,7 +5,7 @@
 @section('content')
 
 <div style="margin-left: 100px">
-    <h1 style="color: gold; margin-bottom: 30px; padding-top: 20px">搜索食物 | Search Foods</h1>
+    <h1 style="color: gold; margin-bottom: 30px; padding-top: 20px">管理食物 | Manage Foods</h1>
     <form style="margin-bottom: 30px" action="/search" method="get">
         @csrf
         <div class="d-inline-flex mb-3">
@@ -46,22 +46,22 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $product->name }}</h5>
+                                <h5 class="card-title" style="color: gold; font-weight: bold">{{ $product->name }}</h5>
                                 <p class="card-text">
                                     <ul class="list-unstyled">
-                                        <li>Category</li>
+                                        <li style="font-weight: bold">Category</li>
                                         <li>{{ $product->type }}</li>
                                     </ul>
                                     <ul class="list-unstyled">
-                                        <li>Description</li>
+                                        <li style="font-weight: bold">Description</li>
                                         <li>{{ $product->brief_description }}</li>
                                     </ul>
                                 </p>
                                 <form action="/manage" method="POST">
                                     @csrf
                                     <div>
-                                        <a href="/update/{{ $product->id }}"><button type="button" class="btn btn-primary">Manage</button></a>
-                                        <button type="submit" class="btn btn-danger" name="delete" value="{{ $product->id }}">Delete</button>
+                                        <a href="/update/{{ $product->id }}"><button type="button" class="btn btn-secondary">Update</button></a>
+                                        <button type="submit" class="btn btn-danger" name="delete" value="{{ $product->id }}">Remove</button>
                                     </div>
                                 </form>
                             </div>

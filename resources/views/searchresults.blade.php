@@ -70,9 +70,6 @@
             <div class="card-body">
                 Food is not available
             </div>
-                <!-- <button class="btn btn-dark active" type="button" style="background-color: grey; font-size: 20px; color: white" disabled>
-                    Food is not available
-                </button> -->
         </div>
     @endif
 </div>

@@ -5,7 +5,7 @@
 @section('content')
 
 <div style="margin-left: 100px; margin-right: 100px">
-    <h1 style="color: gold; margin-bottom: 30px; padding-top: 20px">你的购物车 | Your Cart</h1>
+    <h1 style="color: gold; margin-bottom: 30px; font-weight: bold">你的购物车 | Your Cart</h1>
     @if(sizeof($cart_items)==0)
     <div class="cintainer text-center">
         <div class="row align-items-center">

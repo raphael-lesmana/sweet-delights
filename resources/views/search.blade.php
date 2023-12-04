@@ -5,7 +5,7 @@
 @section('content')
 
 <div style="margin-left: 100px">
-    <h1 style="color: gold; margin-bottom: 30px; padding-top: 20px">搜索食物 | Search Foods</h1>
+    <h1 style="color: gold; margin-bottom: 30px">搜索食物 | Search Foods</h1>
     <form style="margin-bottom: 30px" action="/search" method="get">
         @csrf
         <div class="d-inline-flex mb-3">
