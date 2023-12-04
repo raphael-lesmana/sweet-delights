@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\CartItem;
 use App\Models\TransactionDetail;
-use App\Models\TransactionHeader;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
