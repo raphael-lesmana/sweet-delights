@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-weight: bold;">
         <div class="container-fluid"> 
             <a class="navbar-brand" href="/" style="color: gold; font-weight: bold">
                 XiAO DiNG DoNG
@@ -17,7 +17,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="font-weight: bold;">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -31,7 +31,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/cart">Cart</a>
                     </li>
-                @else
+                    @else
                     <li class="nav-item">
                         <a class="nav-link active" href="/add">Add New Food</a>
                     </li>
@@ -39,16 +39,21 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/manage">Manage Food</a>
                     </li>
-                @endif
+                    @endif
+                </ul>
+            </div>  
+                    
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav" style="margin-left:auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false`">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false`" style="color: gold">
                             Welcome, {{ auth()->user()->name }}
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                            <li><a class="dropdown-item" href="/history">Transaction History</a></li>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink" style="background-color: dimgrey">
+                            <li><a class="dropdown-item" href="/profile" style="color: gold">Profile</a></li>
+                            <li><a class="dropdown-item" href="/history" style="color: gold">Transaction History</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/logout">Sign Out</a></li>
+                            <li><a class="dropdown-item" href="/logout" style="color: gold">Sign Out</a></li>
                         </ul>
                     </li>
                     @endauth
@@ -70,7 +75,7 @@
 <div class="bg-image" 
     style="background-image: url(/storage/assets/background-img/background.png); height: 100vh; overflow: scroll">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.85); background-size: cover; height: 100vh; overflow: scroll">
-        <div style="margin-top: 25px; margin-left: 100px">
+        <div style="margin-top: 25px; margin-left: 100px; margin-right: 100px">
             @yield('content')
         </div>
     </div>
