@@ -15,28 +15,28 @@
             <label for="name" class="form-label" style="color: gold; font-size: 20px">
                 <div class="card text-gold" style="background-color: black">Username</div>
             </label>
-            <input type="text" class="form-control" name="name" placeholder="Minimum 5 characters">
+            <input type="text" class="form-control" name="name" placeholder="Minimum 5 characters" value="{{$user->name}}">
         </div>
 
         <div class="col-4 mb-3 mx-auto" style="text-align:left">
             <label for="email" class="form-label" style="color: gold; font-size: 20px">
                 <div class="card text-gold" style="background-color: black">Email</div>
             </label>
-            <input type="email" class="form-control" name="email" placeholder="Must end with '@gmail.com'">
+            <input type="email" class="form-control" name="email" placeholder="Must end with '@gmail.com'" value="{{$user->email}}">
         </div>
 
         <div class="col-4 mb-3 mx-auto" style="text-align:left">
             <label for="phone" class="form-label" style="color: gold; font-size: 20px">
                 <div class="card text-gold" style="background-color: black">Phone Number</div>
             </label>
-            <input type="text" class="form-control" name="phone" placeholder="Must contain 12 digits">
+            <input type="text" class="form-control" name="phone" placeholder="Must contain 12 digits" value="{{$user->phone_number}}">
         </div>
         
         <div class="col-4 mb-3 mx-auto" style="text-align:left">
             <label for="address" class="form-label" style="color: gold; font-size: 20px">
                 <div class="card text-gold" style="background-color: black">Address</div>
             </label>
-            <input type="text" class="form-control" name="address" placeholder="Not mandatory, minimum 5 characters">
+            <input type="text" class="form-control" name="address" placeholder="Not mandatory, minimum 5 characters" value="{{$user->address}}">
         </div>
 
         <div class="col-4 mb-3 mx-auto" style="text-align:left">
