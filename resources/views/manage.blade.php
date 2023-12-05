@@ -3,6 +3,7 @@
 @section('title', 'Manage Food')
 
 @section('content')
+@include('include.error')
     <h1 style="color: gold; margin-bottom: 30px; font-weight: bold">管理食物 | Manage Foods</h1>
     <form style="margin-bottom: 30px" action="/manage" method="get">
         @csrf

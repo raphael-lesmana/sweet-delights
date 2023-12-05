@@ -3,6 +3,7 @@
 @section('title', 'Edit Profile')
 
 @section('content')
+@include('include.error')
 <div class="card text-gold col-4 mx-auto mb-3" style="background-color:black; color: gold; font-size: 30px; text-align: center;">
     编辑个人资料 | Edit Profile
 </div>

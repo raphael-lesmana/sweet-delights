@@ -2,6 +2,7 @@
 
 @section('title', 'Register')
 @section('content')
+@include('include.error')
     <h1 class="text-center">Register</h1>
     <form action="/register" method="post">
         @csrf

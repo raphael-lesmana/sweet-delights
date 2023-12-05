@@ -3,7 +3,7 @@
 @section('title', 'Update Food')
 
 @section('content')
-
+@include('include.error')
 <div class="card text-gold col-6 mx-auto mb-5" style="background-color:black; color: gold; font-size: 30px; text-align: center; font-weight: bold">
     更新食物 | Update Food
 </div>

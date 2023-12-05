@@ -1,6 +1,6 @@
 @if ($errors->any())
     <div class="row justify-content-center">
-        <div class="col-4 z-4 position-absolute">
+        <div class="col-4 position-absolute" style="z-index: 10000;">
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <ul>
                     @foreach ($errors->all() as $error)

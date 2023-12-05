@@ -3,7 +3,7 @@
 @section('title', 'Search')
 
 @section('content')
-
+@include('include.error')
 <div style="margin-left: 100px">
     <h1 style="color: gold; margin-bottom: 30px">搜索食物 | Search Foods</h1>
     <form style="margin-bottom: 30px" action="/search" method="get">
