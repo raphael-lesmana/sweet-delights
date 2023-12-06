@@ -24,3 +24,8 @@ public/storage
         ├── default1.jpg
         └── default2.jpg
 ```
+
+```
+public/img
+└── guest_background.jpg https://media.istockphoto.com/id/545286388/id/foto/latar-belakang-kosong-makanan-cina.jpg?s=612x612&w=0&k=20&c=cP30wn8oY16u-7wAe_vlnDhDNaGpRuFYtDDKDHKLMQk=
+```
