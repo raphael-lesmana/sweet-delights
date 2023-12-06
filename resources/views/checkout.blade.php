@@ -10,7 +10,7 @@
 
 <div class="col-8 mx-auto">
     <p class="mb-1" style="color: white; font-size: 25px">Billing Information</p>
-    <form action="/checkout" method="POST" enctype="multipart/form-data">
+    <form action="/" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row d-flex justify-content-between">
             <div class="col mb-3" style="text-align:left">

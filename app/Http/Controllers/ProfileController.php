@@ -25,16 +25,16 @@ class ProfileController extends Controller
         $request->validate([
             'name' => 'required|between:5,50',
             'email' => 'nullable|email|ends_with:@gmail.com',
-            'phone' => 'nullable|numeric|size:12',
+            'phone' => 'nullable|digits:12',
             'address' => 'nullable|min:5',
             'picture' => 'mimes:jpeg,png,jpg',
-            'newpassword' => 'nullable|between:5,255',
-            'conpassword' => 'nullable|between:5,255|same:newpassword',
-            'curpassword' => 'required',
+            'new_password' => 'nullable|between:5,255',
+            'confirm_password' => 'nullable|between:5,255|same:newpassword',
+            'current_password' => 'required',
         ]);
 
         $user = auth()->user();
-        if (!Hash::check($request->curpassword, $user->password))
+        if (!Hash::check($request->current_password, $user->password))
             abort(403);
 
         if (isset($request->picture))
@@ -54,6 +54,7 @@ class ProfileController extends Controller
         if (isset($request->newpassword))
             $user->password = $request->newpassword;
         $user->save();
-        return back();
+        $success = true;
+        return view('settings', compact('user', 'success'));
     }
 }

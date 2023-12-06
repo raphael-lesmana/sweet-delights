@@ -4,6 +4,16 @@
 
 @section('content')
 @include('include.error')
+@if (isset($success))
+    <div class="row justify-content-center">
+        <div class="col-4 position-absolute" style="z-index: 10000;">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Item created!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+@endif
 <div style="margin-left: 100px; margin-right: 100px">
     <h1 style="color: gold; margin-bottom: 30px; font-weight: bold">添加新食物 | Add New Food</h1>
     <form action="/add" method="POST" enctype="multipart/form-data">

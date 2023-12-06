@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::post('/', [CheckoutController::class, 'checkout'])->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
@@ -35,7 +36,6 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::get('/search', [SearchController::class, 'index'])->middleware('auth');
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->middleware('auth');
-Route::post('/checkout', [CheckoutController::class, 'checkout'])->middleware('auth');
 
 Route::get('/add', [ItemController::class, 'add_index'])->middleware('auth');
 Route::post('/add', [ItemController::class, 'add'])->middleware('auth');

@@ -4,6 +4,16 @@
 
 @section('content')
 @include('include.error')
+@if (isset($success))
+    <div class="row justify-content-center">
+        <div class="col-4 position-absolute" style="z-index: 10000;">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Item updated!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+@endif
 <div class="card text-gold col-6 mx-auto mb-5" style="background-color:black; color: gold; font-size: 30px; text-align: center; font-weight: bold">
     更新食物 | Update Food
 </div>

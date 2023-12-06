@@ -39,14 +39,16 @@ class ItemController extends Controller
         if (sizeof($check->get()) > 0)
         {
             $check = $check->increment('qty');
-            return back();
+            $success = true;
+            return view('details', compact('success', 'item'));
         }
 
         auth()->user()->cart_item()->create([
             'item_id' => $id,
             'qty' => 1,
         ]);
-        return back();
+        $success = true;
+        return view('details', compact('success', 'item'));
     }
 
     public function add(Request $request)
@@ -73,7 +75,8 @@ class ItemController extends Controller
         $item->price = $request->price;
         $item->picture = $filename;
         $item->save();
-        return back();
+        $success = true;
+        return view('add', compact('success'));
     }
 
     public function manage_index(Request $request)
@@ -180,6 +183,7 @@ class ItemController extends Controller
         $item->price = $request->price;
         $item->picture = $filename;
         $item->save();
-        return back();
+        $success = true;
+        return view('update', compact('item', 'success'));
     }
 }

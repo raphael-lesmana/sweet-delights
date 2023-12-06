@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CartItem;
+use App\Models\Item;
 use App\Models\TransactionDetail;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,10 @@ class CheckoutController extends Controller
             ]);
         }
         $cart->delete();
-        return redirect('/');
+        $success = true;
+        $main_dishes = Item::where('type', 'Main Course')->get();
+        $beverages = Item::where('type', 'Beverage')->get();
+        $desserts = Item::where('type', 'Dessert')->get();
+        return view('index', compact('main_dishes', 'beverages', 'desserts', 'success'));
     }
 }

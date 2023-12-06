@@ -3,6 +3,16 @@
 @section('title', 'Food Description')
 
 @section('content')
+@if (isset($success))
+    <div class="row justify-content-center">
+        <div class="col-4 position-absolute" style="z-index: 10000;">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Item added to your cart!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+@endif
 <div class="d-grid col-6 mx-auto btn btn-dark active mt-5" style="color: gold; font-size: 30px; background-color: black" diasbled>
     食物细节 | Food Detail
 </div>
