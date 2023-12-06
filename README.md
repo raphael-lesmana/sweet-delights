@@ -48,3 +48,5 @@ public/storage
     * `admin@gmail.com`  
 5. Run the server using `php artisan serve`, and navigate to `localhost:8000/`.
 6. All default user accounts have their passwords set to `password`. Use this to log in.
+
+Asset source URLs can be found in [SOURCES.md](./SOURCES.md)
