@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
@@ -178,6 +179,21 @@ class DatabaseSeeder extends Seeder
             'full_description' => 'Long ago in Ancient Greece, Diogenes showed that man is more than a featherless biped. Will you wither and die as a featherless biped, or will you fight for your humanity?',
             'price' => 10,
             'picture' => 'beef-cream.jpg',
+        ]);
+
+        User::create([
+            'name' => 'Example',
+            'email' => 'example@gmail.com',
+            'password' => 'password',
+            'picture' => 'default0.jpg',
+        ]);
+
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'password' => 'password',
+            'picture' => 'default1.jpg',
+            'is_admin' => true,
         ]);
     }
 }

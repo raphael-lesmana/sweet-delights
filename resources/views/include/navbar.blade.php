@@ -51,7 +51,9 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink" style="background-color: dimgrey">
                             <li><a class="dropdown-item" href="/profile" style="color: gold">Profile</a></li>
+                            @if (!Gate::allows('admin'))
                             <li><a class="dropdown-item" href="/history" style="color: gold">Transaction History</a></li>
+                            @endif
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="/logout" style="color: gold">Sign Out</a></li>
                         </ul>

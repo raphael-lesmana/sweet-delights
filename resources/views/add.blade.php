@@ -3,7 +3,7 @@
 @section('title', 'Add New Food')
 
 @section('content')
-
+@include('include.error')
 <div style="margin-left: 100px; margin-right: 100px">
     <h1 style="color: gold; margin-bottom: 30px; font-weight: bold">添加新食物 | Add New Food</h1>
     <form action="/add" method="POST" enctype="multipart/form-data">
