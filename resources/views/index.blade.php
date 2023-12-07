@@ -47,6 +47,9 @@
             </div>
             @endforeach
         </div>
+        <div class=row>
+            {{ $main_dishes->links() }}
+        </div>
     </div>
 
     <div id="beverage-heading">
@@ -71,6 +74,9 @@
             </div>
             @endforeach
         </div>
+        <div class="row">
+            {{ $beverages->links() }}
+        </div>
     </div>
 
     <div id="dessert-heading">
@@ -93,6 +99,9 @@
                 </a>
             </div>
             @endforeach
+        </div>
+        <div class="row">
+            {{ $desserts->links() }}
         </div>
     </div>
 

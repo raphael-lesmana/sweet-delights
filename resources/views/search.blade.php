@@ -7,7 +7,6 @@
 <div style="margin-left: 100px">
     <h1 style="color: gold; margin-bottom: 30px">搜索食物 | Search Foods</h1>
     <form style="margin-bottom: 30px" action="/search" method="get">
-        @csrf
         <div class="d-inline-flex mb-3">
             <input class="form-control me-2" type="search" placeholder="Enter food name" name="search" style="width: 700px">
             <button class="btn btn-dark">Search</button>
