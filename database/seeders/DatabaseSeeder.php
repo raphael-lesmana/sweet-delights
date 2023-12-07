@@ -181,6 +181,51 @@ class DatabaseSeeder extends Seeder
             'picture' => 'beef-cream.jpg',
         ]);
 
+        DB::table('items')->insert([
+            'name' => 'Beef Cream',
+            'type' => 'Dessert',
+            'brief_description' => 'Lacrimat Deus',
+            'full_description' => 'Long ago in Ancient Greece, Diogenes showed that man is more than a featherless biped. Will you wither and die as a featherless biped, or will you fight for your humanity?',
+            'price' => 10,
+            'picture' => 'beef-cream.jpg',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Beef Cream',
+            'type' => 'Dessert',
+            'brief_description' => 'Lacrimat Deus',
+            'full_description' => 'Long ago in Ancient Greece, Diogenes showed that man is more than a featherless biped. Will you wither and die as a featherless biped, or will you fight for your humanity?',
+            'price' => 10,
+            'picture' => 'beef-cream.jpg',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Beef Cream',
+            'type' => 'Dessert',
+            'brief_description' => 'Lacrimat Deus',
+            'full_description' => 'Long ago in Ancient Greece, Diogenes showed that man is more than a featherless biped. Will you wither and die as a featherless biped, or will you fight for your humanity?',
+            'price' => 10,
+            'picture' => 'beef-cream.jpg',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Beef Cream',
+            'type' => 'Dessert',
+            'brief_description' => 'Lacrimat Deus',
+            'full_description' => 'Long ago in Ancient Greece, Diogenes showed that man is more than a featherless biped. Will you wither and die as a featherless biped, or will you fight for your humanity?',
+            'price' => 10,
+            'picture' => 'beef-cream.jpg',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Beef Cream',
+            'type' => 'Dessert',
+            'brief_description' => 'Lacrimat Deus',
+            'full_description' => 'Long ago in Ancient Greece, Diogenes showed that man is more than a featherless biped. Will you wither and die as a featherless biped, or will you fight for your humanity?',
+            'price' => 10,
+            'picture' => 'beef-cream.jpg',
+        ]);
+
         User::create([
             'name' => 'Example',
             'email' => 'example@gmail.com',
