@@ -3,7 +3,7 @@
 * Yennifer Wilanata (2540123725)
 
 ## Usage
-1. Unzip the zip file, then unzip main.zip file
+1. Unzip `main.zip`. Enter this 
 2. Copy the contents of `.env.example` into a new file called `.env`. Fill out the appropriate credentials for the database in lines 11-15. If you do not have a database, then you need to create it first.
 ```
 DB_CONNECTION=mysql
