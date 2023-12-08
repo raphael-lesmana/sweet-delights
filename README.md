@@ -19,44 +19,11 @@ composer install
 php artisan migrate:fresh --seed
 php artisan storage:link
 ```
-4. Create the following file structure in `public/storage`:
-```
-public/storage/
-└── assets/
-    ├── background-img/
-    ├── items/
-    └── profiles/
-```
-5. Unzip the contents of `background-img.zip` into `background-img/`, `items.zip` into `items/`, and `profiles/` into `/profiles`. The file structure should look like so:
-```
-public/storage
-└── assets/
-    ├── background-img/
-    │   └── background.png
-    ├── items/
-    │   ├── beef-cream.jpg
-    │   ├── chinese-tea.jpg
-    │   ├── general-tso.jpg
-    │   ├── liang-tea.jpg
-    │   ├── mapo-tofu.jpg
-    │   ├── meat-tea.jpg
-    │   ├── mongolian-beef.png
-    │   ├── orange-chicken.jpg
-    │   ├── pumpkin-cake.jpg
-    │   ├── sesame-balls.jpg
-    │   ├── sesame-chicken.jpg
-    │   ├── soybean-milk.jpg
-    │   ├── sweet-and-sour-pork.jpg
-    │   └── tofu-pudding.jpg
-    └── profiles/
-        ├── default0.jpg
-        ├── default1.jpg
-        └── default2.jpg
-```
-6. The seeder generates 22 dummy users, 10 of which are regular users, another 10 of which are admins, and 2 have the following email addresses:
+
+4. The seeder generates 22 dummy users, 10 of which are regular users, another 10 of which are admins, and 2 have the following email addresses:
     * `example@gmail.com`  
     * `admin@gmail.com`  
-7. Run the server using `php artisan serve`, and navigate to `localhost:8000/`.
-8. All default user accounts have their passwords set to `password`. Use this to log in.
+5. Run the server using `php artisan serve`, and navigate to `localhost:8000/`.
+6. All default user accounts have their passwords set to `password`. Use this to log in.
 
 Asset source URLs can be found in [SOURCES.md](./SOURCES.md)
