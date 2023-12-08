@@ -13,7 +13,7 @@ DB_DATABASE=la05_lab
 DB_USERNAME=la05_lab
 DB_PASSWORD=
 ```
-3. Run the following commands inside the main directory:
+3. Run the following commands:
 ```
 composer install
 php artisan migrate:fresh --seed
