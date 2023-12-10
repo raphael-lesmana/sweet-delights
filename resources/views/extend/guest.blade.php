@@ -6,9 +6,6 @@
         <link href="./app.css" rel="stylesheet">
     </head>
     <body style="background-color: black">
-        @section('error')
-            @include('include.error')
-        @show
         <div class="grid z-3">
             <div class="row">
                 <div class="col-8 guest-background"></div>

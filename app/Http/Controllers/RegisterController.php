@@ -22,7 +22,7 @@ class RegisterController extends Controller
             'email' => 'required|email|ends_with:@gmail.com',
             'name' => 'required|between:5,50',
             'password' => 'required|between:5,255',
-            'conPassword' => 'required|between:5,255|same:password',
+            'confirm_password' => 'required|between:5,255|same:password',
         ]);
 
         $user = new User;

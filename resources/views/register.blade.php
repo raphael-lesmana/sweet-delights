@@ -19,8 +19,8 @@
             <input id="password" type="password" class="form-control" placeholder="Minimum 5 Characters, Maximum 255 Characters" name="password" required style="width: 400px">
         </div>
         <div class="mb-4">
-            <label for="conPassword" class="form-label">Confirm Password</label>
-            <input id="conPassword" type="password" class="form-control" placeholder="Has to be the same with Password Field" name="conPassword" required style="width: 400px">
+            <label for="confirm_password" class="form-label">Confirm Password</label>
+            <input id="confirm_password" type="password" class="form-control" placeholder="Has to be the same with Password Field" name="conPassword" required style="width: 400px">
         </div>
         <button type="submit" class="btn btn-secondary mb-4" style="width: 400px">Register</button>
         <div class="mb-4" style="text-align: center">
