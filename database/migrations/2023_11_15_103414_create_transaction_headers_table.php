@@ -16,6 +16,13 @@ return new class extends Migration
         Schema::create('transaction_headers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
+            $table->string("destination_address");
+            $table->enum("status", ["pending", "processing", "delivery", "received"]);
+            $table->timestamp("order_date");
+            $table->timestamp("received_date")->nullable();
+            $table->string("notes")->nullable();
+            $table->string("receipt")->nullable();
+            $table->bigInteger("total_price")->unsigned();
             $table->timestamps();
         });
     }

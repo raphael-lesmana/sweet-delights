@@ -10,8 +10,11 @@ class TransactionDetail extends Model
     protected $fillable = [
         'transaction_header_id',
         'qty',
-        'item_name',
         'item_price',
+        'top_layer',
+        'bottom_layer',
+        'petal_colors',
+        'sugar_level',
     ];
     public function transactionHeader()
     {
