@@ -13,6 +13,7 @@
         </div>
     </div>
 @endif
+<!--
     <h1 style="color: gold; margin-bottom: 25px">
         菜单 | Menu
     </h1>
@@ -104,6 +105,6 @@
             {{ $desserts->links() }}
         </div>
     </div>
-
+-->
     <script src="/script.js"></script>
 @endsection

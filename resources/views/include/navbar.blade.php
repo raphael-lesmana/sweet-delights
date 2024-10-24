@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-weight: bold;">
         <div class="container-fluid"> 
             <a class="navbar-brand" href="/" style="color: gold; font-weight: bold">
-                XiAO DiNG DoNG
+                Sweet Delights
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
                     @auth
                     @if (!Gate::allows('admin'))
                     <li class="nav-item">
-                        <a class="nav-link active" href="/search">Search Food</a>
+                        <a class="nav-link active" href="/order">Order</a>
                     </li>
                 
                     <li class="nav-item">

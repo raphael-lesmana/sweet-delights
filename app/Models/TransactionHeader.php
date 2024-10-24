@@ -9,6 +9,16 @@ class TransactionHeader extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'destination_address',
+        'status',
+        'order_date',
+        'received_date',
+        'notes',
+        'receipt',
+        'total_price',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

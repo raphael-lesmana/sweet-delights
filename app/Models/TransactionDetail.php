@@ -13,7 +13,7 @@ class TransactionDetail extends Model
         'item_price',
         'top_layer',
         'bottom_layer',
-        'petal_colors',
+        'petal_color',
         'sugar_level',
     ];
     public function transactionHeader()
