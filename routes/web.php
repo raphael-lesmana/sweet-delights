@@ -59,3 +59,5 @@ Route::get('/settings', [ProfileController::class, 'settings'])->middleware('aut
 Route::patch('/settings', [ProfileController::class, 'save'])->middleware('auth');
 
 Route::get('/order', [OrderController::class, 'index'])->middleware('auth');
+
+Route::get('/history', [TransactionController::class, 'index'])->middleware('auth');
