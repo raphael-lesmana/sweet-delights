@@ -8,7 +8,7 @@
 </div>
 
 <div class="col-8 mx-auto">
-    <form action="/" method="POST" enctype="multipart/form-data">
+    <form action="/transactions/{{$id}}" method="POST" enctype="multipart/form-data">
     @csrf
     <p class="mb-1" style="color: white; font-size: 25px;">Delivery Information</p>
     <div class="mb-3 mx-auto" style="text-align:left">
@@ -171,11 +171,47 @@
             <label for="proof" class="form-label" style="color: gold; font-size: 20px">
                 <div class="card text-gold" style="background-color: black">Proof of Payment</div>
             </label>
-            <img src="/storage/asset/receipt/{{$header->receipt}}" alt="">
+            <img src="/storage/asset/receipt/{{$header->receipt}}" alt="" width="200px">
         </div>
     </div>
 
     @if (Gate::allows('admin'))
+    <div class="row d-flex justify-content-start">
+    <div class="mb-3 col col-4" style="text-align:left">
+        <label for="status" class="form-label" style="color: gold; font-size: 20px">
+            <div class="card text-gold" style="background-color: black">Status</div>
+        </label>
+        <select class="form-select" name="status" placeholder="">
+            <option value="pending" 
+            @if ($header->status == 'pending')
+            selected
+            @endif
+            >Pending</option>
+            <option value="cancelled"
+            @if ($header->status == 'cancelled')
+            selected
+            @endif
+            >Cancelled</option>
+            <option value="processing"
+            @if ($header->status == 'processing')
+            selected
+            @endif
+            >Processing</option>
+            <option value="delivery"
+            @if ($header->status == 'delivery')
+            selected
+            @endif
+            >Delivery</option>
+            <option value="received"
+            @if ($header->status == 'received')
+            selected
+            @endif
+            >Received</option>
+        </select>
+    </div>
+    </div>
+
+
     <div style="text-align: left">
         <button type="submit" class="btn" style="color:gold; background-color: black">Save</button>
     </div>    

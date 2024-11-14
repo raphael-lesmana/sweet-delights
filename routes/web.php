@@ -60,6 +60,7 @@ Route::patch('/settings', [ProfileController::class, 'save'])->middleware('auth'
 
 Route::get('/order', [OrderController::class, 'index'])->middleware('auth');
 
-Route::get('/history', [TransactionController::class, 'index'])->middleware('auth');
+Route::get('/history', [TransactionController::class, 'index'])->middleware('auth')->name('history');
 
 Route::get('/transactions/{id}', action: [TransactionController::class, 'detail'])->middleware('auth')->name('transactions');
+Route::post('/transactions/{id}', action: [TransactionController::class, 'update'])->middleware('auth');
