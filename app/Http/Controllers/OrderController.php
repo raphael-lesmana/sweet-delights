@@ -20,13 +20,20 @@ class OrderController extends Controller
         //     'address' => 'required|min:5',
         //     'zip' => 'required|numeric'
         // ]);
+        
+        $filename = time() . $request->file('proof')->getClientOriginalName();
+        $request->file('proof')->storeAs('/asset/receipt/', $filename, 'public');
 
         $header = auth()->user()->transaction_header()->create([
             'destination_address' => $request->address,
+            'city' => $request->city,
+            'zip_code' => $request->zip,
+            'province' => $request->province,
             'status' => 'pending',
             'order_date' => date("Y-m-d",time()),
             'notes' => $request->notes,
             'total_price' => $request->quantity * 40000,
+            'receipt' => $filename,
         ]);
 
         $top_layer = 0;
@@ -66,18 +73,15 @@ class OrderController extends Controller
         {
             $petal_colors |= 4;
         }
-        if ($request->purple)
+        if ($request->blue)
         {
             $petal_colors |= 8;
         }
-        if ($request->blue)
+        if ($request->yellow)
         {
             $petal_colors |= 16;
         }
-        if ($request->yellow)
-        {
-            $petal_colors |= 32;
-        }
+
 
         $header->transaction_detail()->create([
             'qty' => $request->quantity,
@@ -85,7 +89,7 @@ class OrderController extends Controller
             'top_layer' => $top_layer,
             'bottom_layer' => $bottom_layer,
             'petal_color' => $petal_colors,
-            'sugar_level' => 50,
+            'sugar_level' => $request->sugar,
         ]);
 
          

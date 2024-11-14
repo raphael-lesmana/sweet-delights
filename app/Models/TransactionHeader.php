@@ -11,10 +11,14 @@ class TransactionHeader extends Model
 
     protected $fillable = [
         'destination_address',
+        'city',
+        'province',
+        'zip_code',
         'status',
         'order_date',
         'received_date',
         'notes',
+        'user_id',
         'receipt',
         'total_price',
     ];

@@ -34,24 +34,24 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 
-Route::get('/search', [SearchController::class, 'index'])->middleware('auth');
+// Route::get('/search', [SearchController::class, 'index'])->middleware('auth');
 
-Route::get('/checkout', [CheckoutController::class, 'index'])->middleware('auth');
+// Route::get('/checkout', [CheckoutController::class, 'index'])->middleware('auth');
 
-Route::get('/add', [ItemController::class, 'add_index'])->middleware('auth')->middleware('admin');
-Route::post('/add', [ItemController::class, 'add'])->middleware('auth')->middleware('admin');
+// Route::get('/add', [ItemController::class, 'add_index'])->middleware('auth')->middleware('admin');
+// Route::post('/add', [ItemController::class, 'add'])->middleware('auth')->middleware('admin');
 
-Route::get('/item/{id}', [ItemController::class, 'detail']);
-Route::post('/item/{id}', [ItemController::class, 'order']);
+// Route::get('/item/{id}', [ItemController::class, 'detail']);
+// Route::post('/item/{id}', [ItemController::class, 'order']);
 
-Route::get('/manage', [ItemController::class, 'manage_index'])->middleware('auth')->middleware('admin');
-Route::post('/manage', [ItemController::class, 'delete'])->middleware('auth')->middleware('admin');
+// Route::get('/manage', [ItemController::class, 'manage_index'])->middleware('auth')->middleware('admin');
+// Route::post('/manage', [ItemController::class, 'delete'])->middleware('auth')->middleware('admin');
 
-Route::get('/update/{id}', [ItemController::class, 'update_index'])->middleware('auth')->middleware('admin');
-Route::patch('/update/{id}', [ItemController::class, 'update'])->middleware('auth')->middleware('admin');
+// Route::get('/update/{id}', [ItemController::class, 'update_index'])->middleware('auth')->middleware('admin');
+// Route::patch('/update/{id}', [ItemController::class, 'update'])->middleware('auth')->middleware('admin');
 
-Route::get('/cart', [CartItemController::class, 'display'])->middleware('auth');
-Route::post('/cart', [CartItemController::class, 'process'])->middleware('auth');
+// Route::get('/cart', [CartItemController::class, 'display'])->middleware('auth');
+// Route::post('/cart', [CartItemController::class, 'process'])->middleware('auth');
 
 Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
 
@@ -61,3 +61,5 @@ Route::patch('/settings', [ProfileController::class, 'save'])->middleware('auth'
 Route::get('/order', [OrderController::class, 'index'])->middleware('auth');
 
 Route::get('/history', [TransactionController::class, 'index'])->middleware('auth');
+
+Route::get('/transactions/{id}', action: [TransactionController::class, 'detail'])->middleware('auth')->name('transactions');

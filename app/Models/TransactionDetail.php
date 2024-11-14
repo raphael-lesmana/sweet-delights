@@ -20,6 +20,5 @@ class TransactionDetail extends Model
     {
         return $this->belongsTo(TransactionHeader::class);
     }
-
     use HasFactory;
 }

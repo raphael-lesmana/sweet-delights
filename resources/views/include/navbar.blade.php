@@ -33,11 +33,7 @@
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link active" href="/add">Add New Food</a>
-                    </li>
-                
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/manage">Manage Food</a>
+                        <a class="nav-link active" href="/history">Transaction History</a>
                     </li>
                     @endif
                 </ul>

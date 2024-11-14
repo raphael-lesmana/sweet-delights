@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string("destination_address");
+            $table->string('city');
+            $table->string('province');
+            $table->string('zip_code');
             $table->enum("status", ["pending", "processing", "delivery", "received"]);
             $table->timestamp("order_date");
             $table->timestamp("received_date")->nullable();
