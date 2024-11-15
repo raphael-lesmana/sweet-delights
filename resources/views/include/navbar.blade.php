@@ -8,8 +8,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-weight: bold;">
+    <nav class="navbar navbar-expand-lg navbar" style="font-weight: bold;">
         <div class="container-fluid"> 
+            <img src="/storage/asset/img/logo-entre.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
             <a class="navbar-brand" href="/" style="color: gold; font-weight: bold">
                 Sweet Delights
             </a>
@@ -71,8 +72,8 @@
     </nav> 
     
 <div class="bg-image" 
-    style="background-image: url(/storage/assets/background-img/background.png); height: 100vh; overflow: scroll">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.85); background-size: cover; height: 100vh; overflow: scroll">
+    style="background-image: url(/storage/asset/img/background.png); height: 100vh; overflow: scroll">
+    <div class="mask">
         <div style="margin-top: 25px; margin-left: 100px; margin-right: 100px">
             @yield('content')
         </div>

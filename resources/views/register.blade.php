@@ -28,7 +28,7 @@
         </div>
         <button type="submit" class="btn btn-secondary mb-4" style="width: 400px">Register</button>
         <div class="mb-4" style="text-align: center">
-            <p>Already have an account?  <a class="text-decoration-none" style="color: yellow" href="login">Log in</a></p>
+            <p>Already have an account?  <a class="text-decoration-none" style="color: #EF45F5" href="login">Log in</a></p>
         </div>
     </form>
 @endsection
