@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg navbar" style="font-weight: bold;">
         <div class="container-fluid"> 
             <img src="/storage/asset/img/logo-entre.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-            <a class="navbar-brand" href="/" style="color: gold; font-weight: bold">
+            <a class="navbar-brand" href="/" style="color:black; font-weight: bold">
                 Sweet Delights
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,9 +29,9 @@
                         <a class="nav-link active" href="/order">Order</a>
                     </li>
                 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link active" href="/cart">Cart</a>
-                    </li>
+                    </li> -->
                     @else
                     <li class="nav-item">
                         <a class="nav-link active" href="/history">Transaction History</a>
@@ -43,26 +43,26 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav" style="margin-left:auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false`" style="color: gold">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false`" style="color: black;">
                             Welcome, {{ auth()->user()->name }}
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink" style="background-color: dimgrey">
-                            <li><a class="dropdown-item" href="/profile" style="color: gold">Profile</a></li>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink" style="background-color: white">
+                            <li><a class="dropdown-item" href="/profile" style="color: black">Profile</a></li>
                             @if (!Gate::allows('admin'))
-                            <li><a class="dropdown-item" href="/history" style="color: gold">Transaction History</a></li>
+                            <li><a class="dropdown-item" href="/history" style="color: black">Transaction History</a></li>
                             @endif
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/logout" style="color: gold">Sign Out</a></li>
+                            <li><a class="dropdown-item" href="/logout" style="color: black">Sign Out</a></li>
                         </ul>
                     </li>
                     @endauth
                     @guest
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="/login" style="color:gold">Log In</a>
+                                <a class="nav-link active" href="/login" style="color:black">Log In</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="/register" style="color:gold">Register</a>
+                                <a class="nav-link active" href="/register" style="color:black">Register</a>
                             </li>
                         </ul>
                     @endguest

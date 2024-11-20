@@ -23,7 +23,20 @@
         <label for="city" class="form-label" style="color: gold; font-size: 20px">
             <div class="card text-gold" style="background-color: black">City/Regency</div>
         </label>
-        <input type="text" class="form-control" name="city" placeholder="">
+        <select name="city" id="" class="form-select">
+            <option value="Jakarta Barat">Jakarta Barat</option>
+            <option value="Jakarta Selatan">Jakarta Selatan</option>
+            <option value="Jakarta Timur">Jakarta Timur</option>
+            <option value="Jakarta Utara">Jakarta Utara</option>
+            <option value="Kota Bekasi">Kota Bekasi</option>
+            <option value="Kabupaten Bekasi">Kabupaten Bekasi</option>
+            <option value="Kota Bogor">Kota Bogor</option>
+            <option value="Kabupaten Bogor">Kabupaten Bogor</option>
+            <option value="Kota Depok">Kota Depok</option>
+            <option value="Kota Tangerang">Kota Tangerang</option>
+            <option value="Kota Tangerang">Kota Tangerang Selatan</option>
+            <option value="Kabupaten Tangerang">Kabupaten Tangerang</option>
+        </select>
     </div>
 
     <div class="row d-flex justify-content-between">
@@ -37,6 +50,11 @@
             <label for="province" class="form-label" style="color: gold; font-size: 20px">
                 <div class="card text-gold" style="background-color: black">Province</div>
             </label>
+            <select name="province" id="" class="form-select">
+                <option value="Jakarta">Jakarta</option>
+                <option value="Jawa Barat">Jawa Barat</option>
+                <option value="Tangerang">Tangerang</option>
+            </select>
             <input type="text" class="form-control" name="province" placeholder="">
         </div>
     </div>
