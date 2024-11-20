@@ -13,14 +13,14 @@
     <p class="mb-1" style="color: white; font-size: 25px;">Delivery Information</p>
     <div class="mb-3 mx-auto" style="text-align:left">
         <label for="address" class="form-label" style="color: gold; font-size: 20px">
-            <div class="card text-gold" style="background-color: black">Address</div>
+            <div class="card text-gold" >Address</div>
         </label>
         <textarea class="form-control" name="address" placeholder=""  disabled>{{$header->destination_address}}</textarea>
     </div>
     
     <div class="mb-3 mx-auto" style="text-align:left">
         <label for="city" class="form-label" style="color: gold; font-size: 20px">
-            <div class="card text-gold" style="background-color: black" ">City/Regency</div>
+            <div class="card text-gold"  ">City/Regency</div>
         </label>
         <input type="text" class="form-control" name="city" placeholder="" value="{{$header->city}}" disabled>
     </div>
@@ -28,13 +28,13 @@
     <div class="row d-flex justify-content-between">
         <div class="mb-3 col" style="text-align:left">
             <label for="zip" class="form-label" style="color: gold; font-size: 20px">
-                <div class="card text-gold" style="background-color: black">ZIP/Postal Code</div>
+                <div class="card text-gold" >ZIP/Postal Code</div>
             </label>
             <input type="text" class="form-control" name="zip" placeholder="" value="{{$header->zip_code}}" disabled>
         </div>
         <div class="mb-3 col" style="text-align:left">
             <label for="province" class="form-label" style="color: gold; font-size: 20px">
-                <div class="card text-gold" style="background-color: black">Province</div>
+                <div class="card text-gold" >Province</div>
             </label>
             <input type="text" class="form-control" name="province" placeholder="" value="{{$header->province}}" disabled>
         </div>
@@ -43,7 +43,7 @@
     <div class="row d-flex justify-content-start">
     <div class="mb-3 col col-4" style="text-align:left">
         <label for="quantity" class="form-label" style="color: gold; font-size: 20px">
-            <div class="card text-gold" style="background-color: black">Quantity</div>
+            <div class="card text-gold" >Quantity</div>
         </label>
         <input type="number" class="form-control" name="quantity" placeholder="" value="{{$transaction->qty}}" disabled>
     </div>
@@ -143,7 +143,7 @@
     <div class="row d-flex justify-content-start">
     <div class="mb-3 col col-4" style="text-align:left">
         <label for="sugar" class="form-label" style="color: gold; font-size: 20px">
-            <div class="card text-gold" style="background-color: black">Sugar Level</div>
+            <div class="card text-gold" >Sugar Level</div>
         </label>
         <input type="range" class="form-range" step="25" name="sugar" value="{{$transaction->sugar_level}}" disabled>
     </div>
@@ -151,7 +151,7 @@
 
     <div class="mb-3 mx-auto" style="text-align:left">
         <label for="notes" class="form-label" style="color: gold; font-size: 20px">
-            <div class="card text-gold" style="background-color: black">Notes</div>
+            <div class="card text-gold" >Notes</div>
         </label>
         <textarea class="form-control" name="notes" placeholder="" disabled>{{$header->notes}}</textarea>
     </div>
@@ -159,7 +159,7 @@
     <div class="row d-flex justify-content-start">
     <div class="mb-3 col col-4" style="text-align:left">
         <label for="total" class="form-label" style="color: gold; font-size: 20px">
-            <div class="card text-gold" style="background-color: black">Total</div>
+            <div class="card text-gold" >Total</div>
         </label>
         <input type="number" class="form-control" name="total" placeholder="" disabled>
     </div>
@@ -169,7 +169,7 @@
         <div class="mb-3 col col-4" style="text-align:left">
             <p style="color: white;">Transfer to: 1234567890</p>
             <label for="proof" class="form-label" style="color: gold; font-size: 20px">
-                <div class="card text-gold" style="background-color: black">Proof of Payment</div>
+                <div class="card text-gold" >Proof of Payment</div>
             </label>
             <img src="/storage/asset/receipt/{{$header->receipt}}" alt="" width="200px">
         </div>
@@ -179,7 +179,7 @@
     <div class="row d-flex justify-content-start">
     <div class="mb-3 col col-4" style="text-align:left">
         <label for="status" class="form-label" style="color: gold; font-size: 20px">
-            <div class="card text-gold" style="background-color: black">Status</div>
+            <div class="card text-gold" >Status</div>
         </label>
         <select class="form-select" name="status" placeholder="">
             <option value="pending" 

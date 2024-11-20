@@ -72,7 +72,8 @@
     </nav> 
     
 <div class="bg-image" 
-    style="background-image: url(/storage/asset/img/background.png); height: 100vh; overflow: scroll">
+    style="background-image: url(/storage/asset/img/background.png); height: 100vh; overflow: scroll; background-repeat: no-repeat;
+  background-size: cover;">
     <div class="mask">
         <div style="margin-top: 25px; margin-left: 100px; margin-right: 100px">
             @yield('content')
