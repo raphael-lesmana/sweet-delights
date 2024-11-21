@@ -13,6 +13,10 @@
         </div>
     </div>
 @endif
+<div class="col-8 mx-auto mb-3"><h1>Welcome to Sweet Delights</h1>
+<div>
+    <img src="/storage/asset/img/logo-entre.png" alt="">
+</div></div>
 <!--
     <h1 style="color: gold; margin-bottom: 25px">
         菜单 | Menu
@@ -106,5 +110,6 @@
         </div>
     </div>
 -->
+    
     <script src="/script.js"></script>
 @endsection
